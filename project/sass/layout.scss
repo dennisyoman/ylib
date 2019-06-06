@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "./common";
+@import "./mixin";
+
+html, body, select, option, .modal, input {
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', "Helvetica Neue", "Heiti TC","儷黑 Pro", "LiHei Pro","文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "新細明體", sans-serif, Arial, Helvetica;
+    background: #000;
+}
+
+html {
+    //scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+
+    @media screen and (max-width: $mobile) {}
+}
+
+.disabled {
+    pointer-events: none !important;
+}
+
+
+
+
+
+//@import "./dropdown";
