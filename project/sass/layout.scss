@@ -542,8 +542,8 @@ body {
         height: 65px;
         background: $third;
         text-align: right;
-        position:relative;
-        z-index:2;
+        position: relative;
+        z-index: 2;
 
         .links {
             li {
@@ -631,7 +631,7 @@ body {
                             top: 20px;
                         }
 
-                        &.active{
+                        &.active {
                             &::after {
                                 content: "\f00d";
                             }
@@ -695,8 +695,8 @@ body {
     .third-nav {
         height: 45px;
         background: #47525b;
-        position:relative;
-        z-index:1;
+        position: relative;
+        z-index: 1;
 
         .links {
             li {
@@ -728,7 +728,7 @@ body {
             height: auto;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
-            background:none;
+            background: none;
 
             @include box;
 
@@ -810,8 +810,9 @@ body {
         .swiper-pagination-bullet-active {
             background: $light;
         }
+
         .swiper-button-next, .swiper-button-prev {
-            outline:none;
+            outline: none;
         }
     }
 
@@ -1130,7 +1131,7 @@ body {
 
         .swiper-button-next, .swiper-button-prev {
             background: none;
-            outline:none;
+            outline: none;
 
             &::after {
                 content: "\f105";
@@ -1441,13 +1442,14 @@ body {
                     }
                 }
             }
-            .swiper-button-next, .swiper-button-prev {
-                outline:none;
-            }
+        }
 
-            .swiper-button-disabled {
-                @include opacity(0);
-            }
+        .swiper-button-next, .swiper-button-prev {
+            outline: none;
+        }
+
+        .swiper-button-disabled {
+            @include opacity(0);
         }
     }
 }
@@ -1594,18 +1596,18 @@ body {
 .footer {
     background: $third;
 
-    .gotop{
-        display:none;
-        width:34px;
-        height:34px;
-        position:fixed;
-        bottom:10px;
-        right:1rem;
-        padding:0;
-        background:url("../images/icon_gotop.png") no-repeat center center;
-        background-size:100% 100%;
-        z-index:100;
-        cursor:pointer;
+    .gotop {
+        display: none;
+        width: 34px;
+        height: 34px;
+        position: fixed;
+        bottom: 10px;
+        right: 1rem;
+        padding: 0;
+        background: url("../images/icon_gotop.png") no-repeat center center;
+        background-size: 100% 100%;
+        z-index: 100;
+        cursor: pointer;
     }
 
     > div {
