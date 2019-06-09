@@ -111,8 +111,8 @@ body {
 .header .fixed-nav .menu {
   position: absolute;
   width: 25px;
-  height: 17px;
-  top: 14px;
+  height: 15px;
+  top: 15px;
   left: 1rem;
   z-index: 998;
   display: none;
@@ -149,7 +149,7 @@ body {
   background: #fff;
   position: absolute;
   z-index: 1;
-  top: 7px;
+  top: 6px;
   left: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
