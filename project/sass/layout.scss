@@ -82,32 +82,32 @@ body {
 
         .menu {
             position: absolute;
-            width: 30px;
-            height: 20px;
-            top: 15px;
-            left: 10px;
+            width: 25px;
+            height: 17px;
+            top: 14px;
+            left: 1rem;
             z-index: 998;
             display: none;
             font-size: 25px;
             line-height: 50px;
             text-align: center;
-            border-top: 1px solid #fff;
-            border-bottom: 1px solid #fff;
+            border-top: 3px solid #fff;
+            border-bottom: 3px solid #fff;
 
-            @include scale(0.8);
+            //@include scale(0.8);
 
             &.active {
                 border: none;
 
                 &::before {
-                    width: 30px;
+                    width: 25px;
 
                     @include rotate(45deg);
                 }
 
                 &::after {
                     left: 0;
-                    width: 30px;
+                    width: 25px;
 
                     @include rotate(-45deg);
                 }
@@ -115,12 +115,12 @@ body {
 
             &::after, &::before {
                 content: "";
-                width: 30px;
-                height: 1px;
+                width: 25px;
+                height: 3px;
                 background: #fff;
                 position: absolute;
                 z-index: 1;
-                top: 10px;
+                top: 7px;
                 left: 0;
 
                 @include transition(all, 0.3s);
