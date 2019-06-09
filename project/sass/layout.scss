@@ -810,6 +810,9 @@ body {
         .swiper-pagination-bullet-active {
             background: $light;
         }
+        .swiper-button-next, .swiper-button-prev {
+            outline:none;
+        }
     }
 
     .intro {
@@ -1127,6 +1130,7 @@ body {
 
         .swiper-button-next, .swiper-button-prev {
             background: none;
+            outline:none;
 
             &::after {
                 content: "\f105";
@@ -1436,6 +1440,9 @@ body {
                         }
                     }
                 }
+            }
+            .swiper-button-next, .swiper-button-prev {
+                outline:none;
             }
 
             .swiper-button-disabled {
