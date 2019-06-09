@@ -829,7 +829,7 @@ body {
 @media screen and (max-width: 800px) {
   /* line 780, ../sass/layout.scss */
   .banner .swiper-container .swiper-wrapper .swiper-slide {
-    height: 60vh;
+    height: 50vh;
   }
   /* line 799, ../sass/layout.scss */
   .banner .swiper-container .swiper-wrapper .swiper-slide::after {
