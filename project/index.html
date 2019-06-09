@@ -25,21 +25,617 @@
     <!-- css -->
     <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/swiper.min.css" />
-    <!-- <link rel="stylesheet" href="css/dropdown.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- javascript -->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/hammer.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/modernizr.js"></script>
+    <script src="js/jquery.wow.min.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
     
 </head>
 
 <body>
+    <!-- header start -->
+    <div id="header" class="header">
+                                                     
+        <div class="fixed-nav">
+            <div class="maxw">
+                <div id="mmb" class="menu"></div>
+                <div class="logo"><a href="./"></a></div>
+                <!--已登入 -->
+                <div class="member is-login">
+                    <a><span>S</span>Shirley Chang</a>
+                    <ul>
+                        <li><a href="#"><img src="images/icon_user.png"/>會員專區</a></li>
+                        <li><a href="#"><img src="images/icon_news.png"/>訂閱電子報</a></li>
+                        <li><a href="#"><img src="images/icon_logout.png"/>登出</a></li>
+                    </ul>
+                </div>
+                <!--未登入-->
+                <!--<div class="member">
+                    <a href="#"><img src="images/icon_user_g.png"/>會員登入</a><a href="#">加入會員</a>
+                </div>-->
+                <div class="cart">
+                    <a href="#"><span>3</span></a>
+                </div>
+                <div class="search">
+                    <form>
+                        <select>
+                            <option value="0">全部</option>
+                            <option value="1">書名</option>
+                            <option value="2">作者</option>
+                            <option value="3">ISBN</option>
+                        </select><input type="text" placeholder="搜尋..."/>
+                        <input type="submit" value="">
+                    </form>
+                </div>
+            </div>
+        </div>                                                                             
+        <div class="main-nav">
+            <div class="maxw">
+                <ul class="links">
+                    <li>
+                        <a href="#">書籍類型</a>
+                        <ul>
+                            <li><a href="#">熱門新書</a></li>
+                            <li><a href="#">暢銷排行</a></li>
+                            <li>
+                                <a href="#">書籍分類</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">金庸作品</a>
+                                        <ul>
+                                            <li><a href="#">金庸作品集</a></li>
+                                            <li><a href="#">金庸漫畫</a></li>
+                                            <li><a href="#">金庸茶館</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">文學．小說</a>
+                                        <ul>
+                                            <li><a href="#">文學</a></li>
+                                            <li><a href="#">小說</a></li>
+                                            <li><a href="#">推理</a></li>
+                                            <li><a href="#">青少年書</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">企管．資訊</a>
+                                        <ul>
+                                            <li><a href="#">商業理財</a></li>
+                                            <li><a href="#">資訊</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">人文．科普</a>
+                                        <ul>
+                                            <li><a href="#">自然</a></li>
+                                            <li><a href="#">科普</a></li>
+                                            <li><a href="#">歷史地理</a></li>
+                                            <li><a href="#">台灣主題</a></li>
+                                            <li><a href="#">社會科學</a></li>
+                                            <li><a href="#">哲學思想</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">生活．藝術</a>
+                                        <ul>
+                                            <li><a href="#">旅遊</a></li>
+                                            <li><a href="#">時尚</a></li>
+                                            <li><a href="#">生活風格</a></li>
+                                            <li><a href="#">藝術設計</a></li>
+                                            <li><a href="#">電影</a></li>
+                                            <li><a href="#">漫畫</a></li>
+                                            <li><a href="#">文創商品</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">心理．健康</a>
+                                        <ul>
+                                            <li><a href="#">心理</a></li>
+                                            <li><a href="#">勵志</a></li>
+                                            <li><a href="#">心靈</a></li>
+                                            <li><a href="#">醫療保健</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">親子．童書</a>
+                                        <ul>
+                                            <li><a href="#">童書</a></li>
+                                            <li><a href="#">繪本</a></li>
+                                            <li><a href="#">親子教養</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">教育．學術</a>
+                                        <ul>
+                                            <li><a href="#">教育</a></li>
+                                            <li><a href="#">學術</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">學習．辭書</a>
+                                        <ul>
+                                            <li><a href="#">辭書</a></li>
+                                            <li><a href="#">語言</a></li>
+                                            <li><a href="#">傳播</a></li>
+                                            <li><a href="#">有聲書</a></li>
+                                            <li><a href="#">CD-ROM</a></li>
+                                            <li><a href="#">考試學習</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">嚴選套書</a></li>
+                    <li><a href="#">主題活動</a></li>
+                    <li><a href="#">親子童書</a></li>
+                    <li><a href="#">得獎推薦</a></li>
+                    <li><a href="#">讀享生活</a></li>
+                    <li><a href="#">非常作家</a></li>
+                    <li><a href="#">數位影音</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="third-nav">
+            <div class="maxw">
+                <ul class="links">
+                    <li><a href="#">故事課</a></li>
+                    <li><a href="#">沉思錄</a></li>
+                    <li><a href="#">混血營</a></li>
+                    <li><a href="#">漢字樹</a></li>
+                    <li><a href="#">金庸</a></li>
+                    <li><a href="#">唐德剛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-nav">
+            <div class="maxw">
+                <ul class="links">
+                    <li><a href="#">遠流出版公司</a></li>
+                    <li><a href="#">遠流博識網</a></li>
+                    <li><a href="#">Best100</a></li>
+                    <li><a href="#">遠流俱樂部</a></li>
+                    <li><a href="#">科學人</a></li>
+                    <li><a href="#">科學少年</a></li>
+                    <li><a href="#">漫點學</a></li>
+                    <li><a href="#">智慧藏</a></li>
+                    <li><a href="#">華山文創</a></li>
+                    <li><a href="#">台灣雲端書庫</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
 
+    <!-- slide banner start -->
+    <div class="banner wow fadeIn">
+        <div class="swiper-container swiper-container-banner">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide bgImg">
+                    <img src="images/banner.jpg"/>
+                    <a href="#" class="intro">
+                        <div class="deco">遠流生活</div>
+                        <h3>老屋可以做什麼？</h3>
+                        <p>如何讓它重新活起來？<br />來看25個台灣老屋創生的故事。</p>
+                    </a>
+                </div>
+                <div class="swiper-slide bgImg">
+                    <img src="images/pic1.png"/>
+                    <a href="#" class="intro">
+                        <div class="deco">遠流生活</div>
+                        <h3>在瑞典地鐵的經血繪畫！ </h3>
+                        <p>藝術家：人體的各種形式，這都是值得慶祝的。</p>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+           
+        </div>
+    </div>
+    <!-- slide banner end -->
+
+    <!-- slide books start -->
+    <div class="books wow fadeInUp">
+        <h2>發燒新書推薦，刷新你的觀點與生活</h2>
+        <div class="swiper-container swiper-container-books maxw">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="discount">79折</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+           
+        </div>
+    </div>
+    <!-- slide books end -->
+
+    <!-- updates start -->
+    <div class="flexbox2 maxw">
+        <!-- left half -->
+        <div>
+            <div class="news">
+                <h2>你需要知道的事</h2>
+                <ul>
+                    <li>
+                        <a href="#"><span>9/15/2019</span><span>《武俠故事》：當諷刺成為溫和的藝術──郭箏X沈默，對談《大話山海經</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span>9/15/2019</span><span>《武俠故事》：當諷刺成為溫和的藝術──郭箏X沈默，對談《大話山海經</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span>9/15/2019</span><span>《武俠故事》：當諷刺成為溫和的藝術──郭箏X沈默，對談《大話山海經</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more"><a href="#">more</a></div>
+                
+            </div>
+            <div class="category">
+                <h2>類別推薦</h2>
+                <ul>
+                    <li>
+                        <a href="#"><span><img src="images/icon_wuxia.png"/></span>金庸作品</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_education.png"/></span>教育 / 學術</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_business.png"/></span>企管 / 資訊</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_human.png"/></span>人文 / 科普</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_novel.png"/></span>文學 / 小說</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_kid.png"/></span>親子 / 同書</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_art.png"/></span>生活 / 藝術</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_mental.png"/></span>心理 / 健康</a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="images/icon_learning.png"/></span>學習 / 辭書</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <!-- right half -->
+        <div class="life">
+            <div class="swiper-container swiper-container-life">
+                <h2>獨享生活</h2>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide bgImg">
+                        <img src="images/banner.jpg"/>
+                        <a href="#" class="intro">
+                            <h3>在老宅裡享受理容與喝咖啡的服務——父刻理髮廳</h3>
+                            <p>近期瑞典地鐵裡的裝置藝術引起大眾熱議，根據《The Guardian》報導，一位平面藝術家 LivStrömquist 將經血議題搬上世人眼前，她以一系列放大的圖畫草圖畫...</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide bgImg">
+                        <img src="images/pic1.png"/>
+                        <a href="#" class="intro">
+                            <h3>藝術家：人體的各種形式，這都是值得慶祝的。</h3>
+                            <p>近期瑞典地鐵裡的裝置藝術引起大眾熱議，根據《The Guardian》報導，一位平面藝術家 LivStrömquist 將經血議題搬上世人眼前，她以一系列放大的圖畫草圖畫...</p>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+    <!-- updates start -->
+
+    <!-- slide books start -->
+    <div class="books wow fadeInUp">
+        <h2>這些書賣得最好</h2>
+        <div class="filter maxw">
+            <a>單書</a>
+            <a>套書</a>
+        </div>
+        <div class="swiper-container swiper-container-books maxw">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 1</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 2</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 3</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 4</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 5</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 6</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 7</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 8</span>
+                        <span class="thumb"><img src="images/book2.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 9</span>
+                        <span class="thumb"><img src="images/book3.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="cart" href="#"></a>
+                    <a href="#">
+                        <span class="rank">Top 10</span>
+                        <span class="thumb"><img src="images/book1.png"/></span>
+                        <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                        <span class="price"><span>300</span></span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+           
+        </div>
+    </div>
+    <!-- slide books end -->
+
+    <!-- video start -->
+    <div class="videos">
+        <h2>看看我們為你所挑的精選影片</h2>
+        <div class="maxw">
+            <div class="yt">
+                <iframe src="https://www.youtube.com/embed/M10vybgHm-g?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="yt">
+                <iframe src="https://www.youtube.com/embed/HLAS-TFGkWE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="yt">
+                <iframe src="https://www.youtube.com/embed/HLAS-TFGkWE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- video end -->
+
+    <!-- social start -->
+    <div class="social">
+        <h2>我們一起分享生活</h2>
+        <div class="share">
+            <a class="yt" href="#">遠 流 YouTube</a>
+            <a class="ig" href="#">遠流 Instagram</a>
+            <a class="fb" href="#">遠 流 粉 絲 團</a>
+            <a class="line" href="#">遠 流 LINE</a>
+        </div>
+        <div class="ads">
+            <a href="#"><img src="images/ad.jpg"/></a>
+            <a href="#"><img src="images/ad.jpg"/></a>
+            <a href="#"><img src="images/ad.jpg"/></a>
+        </div>
+    </div>
+    <!-- social end -->
+
+    <!-- footer start -->
+    <div class="footer">
+        <div class="maxw">
+            <div class="sitemap">
+                <ul>
+                    <h3>關於遠流</h3>
+                    <li><a href="#">關於遠流</a></li>
+                    <li><a href="#">創辦人介紹</a></li>
+                    <li><a href="#">關於博識網</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">團購服務</a></li>
+                </ul>
+                <ul>
+                    <h3>會員服務</h3>
+                    <li><a href="#">會員權益</a></li>
+                    <li><a href="#">服務條款</a></li>
+                    <li><a href="#">訂閱／取消電子報</a></li>
+                    <li><a href="#">下載專區</a></li>
+                </ul>
+                <ul>
+                    <h3>客服中心</h3>
+                    <li><a href="#">查詢帳號密碼</a></li>
+                    <li><a href="#">購物流程說明</a></li>
+                    <li><a href="#">常見問答</a></li>
+                    <li><a href="#">客服專線</a></li>
+                </ul>
+                <ul>
+                    <h3>追蹤我們</h3>
+                    <li>
+                        <a href="#">遠流粉絲團</a> / 
+                        <a href="#">閱讀再進化</a> / 
+                        <a href="#">科學人</a> / 
+                        <a href="#">Best100閱讀精品店</a> / 
+                        <a href="#">科學少年</a> / 
+                        <a href="#">漫點學</a> / 
+                        <a href="#">台灣雲端書庫</a>
+                    </li>
+                    <li><a href="#">遠流LINE@</a></li>
+                    <li><a href="#">遠流IG</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <a class="footer-logo" href="./"><img src="images/logo_ylib.png"/></a>
+                <br />
+                <a href="#"><img src="images/icon_address.png"/> 台北市中正區南昌路2段81號6樓</a>
+                <br />
+                <a href="#"><img src="images/icon_phone.png"/> 電話：(02)2392-6899</a>
+                <a href="#"><img src="images/icon_phone.png"/> 免付費專線：0800-231663</a>
+                <br />
+                <a href="#"><img src="images/icon_fax.png"/> 傳真：(02)2392-6658</a>
+                <a href="#"><img src="images/icon_mail.png"/> 服務信箱：ylib@ylib.com</a>
+            </div>
+        </div>
+        <div class="copyright">Copyright © 2019 Yuan-Liou Publishing Co.,Ltd.All Rights Reserved. YLib is trademark of Yuan-Liou Publishing Co.,Ltd.</div>
+        <div id="gotop" class="gotop"></div>
+    </div>
+    
+    <!-- footer end -->
     
 </body>
 </html>
