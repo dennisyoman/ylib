@@ -14,6 +14,13 @@ $(document).ready(
             
         })
 
+        //search
+        $("#msb").click(function() {
+            $(this).toggleClass("active");
+            $(".search-nav").toggleClass("active");
+            
+        })
+
         //filter
         if ($(".filter").length >= 1) {
             $(".filter").find("a").click(function( index ) {
@@ -27,11 +34,6 @@ $(document).ready(
             $(".gallery").each(function( index ) {
                 gallerize($( this ));
             });
-        }
-
-        //datepicker
-        if ($(".datepicker").length > 0) {
-            $( ".datepicker" ).datepicker();
         }
         
         //scroll to top

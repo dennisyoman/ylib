@@ -41,18 +41,6 @@ body {
 
             overflow: auto;
 
-            .top-nav {
-                display: block;
-            }
-
-            .third-nav {
-                display: block;
-            }
-
-            .main-nav {
-                display: block;
-            }
-
             .cart {
                 display: block !important;
             }
@@ -153,12 +141,42 @@ body {
             @media screen and (max-width: $mobile2) {
                 position: static;
                 text-align: center;
-                padding: 11px 0;
+                padding: 12.5px 0;
 
                 a {
-                    width: 146px;
-                    height: 28px;
+                    width: 130px;
+                    height: 25px;
                 }
+            }
+        }
+
+        .msb{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            width:50px;
+            height:51px;
+            text-align:center;
+            line-height:50px;
+            font-size:20px;
+            color:#fff;
+            display:none;
+            &::before{
+                content: "\f002";
+                font-family: "fontawesome";
+                text-align: center;
+            }
+
+            &.active{
+                background: #47525b;
+                &::before{
+                    content:"\f106";
+                }
+            }
+
+            @media screen and (max-width: $mobile2) {
+                display:inline-block;
             }
         }
 
@@ -187,6 +205,7 @@ body {
                 font-size: 14px;
                 line-height: 26px;
                 text-decoration: none;
+                display:inline-block;
 
                 &::before {
                     content: "\f07a";
@@ -195,152 +214,25 @@ body {
             }
 
             @media screen and (max-width: $mobile2) {
-                top: 58px;
-                display: none;
-            }
-        }
+                top: 13px;
+                right:60px;
 
-        .search {
-            position: absolute;
-            top: 75px;
-            right: 80px;
-            font-size: 14px;
-            line-height: 26px;
-            color: #fff;
-            z-index: 1;
-
-            &:hover {
-                select, input[type=text] {
-                    @include opacity(1);
+                a{
+                    font-size:20px;
                 }
 
-                input[type=submit] {
-                    width: 26px;
-                }
-
-                &::after {
-                    pointer-events: none;
-                }
-            }
-
-            select {
-                vertical-align: middle;
-                display: inline-block;
-                line-height: 26px;
-                font-size: 14px;
-                color: #fff;
-                padding-left: 1em;
-                background-color: $light;
-
-                //@include opacity(0);
-                @include transition(all, 0.3s);
-                @include border-radius(13px 0 0 13px);
-                @include box;
-            }
-
-            option {
-                color: $text;
-            }
-
-            input[type=text] {
-                vertical-align: middle;
-                display: inline-block;
-                line-height: 26px;
-                font-size: 14px;
-                color: #fff;
-                width: 180px;
-                padding: 0 1em;
-                padding-right: 30px;
-                background: #2c343b;
-
-                //@include opacity(0);
-                @include transition(all, 0.3s);
-                @include border-radius(0 13px 13px 0);
-                @include box;
-            }
-
-            input[type=submit] {
-                position: absolute;
-                top: 0;
-                right: 0;
-                vertical-align: middle;
-                display: inline-block;
-                width: 0px;
-                height: 26px;
-                background: transparent;
-
-                @include transition(all, 0.5s);
-            }
-
-            &::after {
-                width: 26px;
-                height: 26px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                content: "\f002";
-                font-family: "fontawesome";
-                text-align: center;
-            }
-
-            @media screen and (max-width: $mobile2) {
-                top: 0px;
-                right: auto;
-                left: 0;
-                z-index: 999;
-                width: 100%;
-                background: #dd0000;
-
-                &:hover {
-                    form {
-                        @include translate(0, 0);
-                    }
-
-                    input[type=submit] {
-                        width: 50px;
-                    }
-                }
-
-                form {
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
-                    top: 0px;
-                    padding: 10px;
-                    background: $third;
-                    display: flex;
-
-                    @include box;
-
-                    z-index: 3;
-
-                    @include translate(0, -100%);
-                }
-
-                input[type=submit] {
-                    height: 50px;
-                }
-
-                select {
-                    line-height: 30px;
-                }
-
-                input[type=text] {
-                    line-height: 30px;
-                    width: 100%;
-
-                    //max-width: 300px;
-               
-                }
-
-                &::after {
-                    top: 12px;
-                    right: 1rem;
-                    z-index: 5;
-                    font-size: 20px;
+                span{
+                    position:absolute;
+                    top:0;
+                    right:-6px;
+                    width:10px;
+                    height:10px;
+                    color:transparent;
                 }
             }
         }
+
+        
 
         .member {
             position: absolute;
@@ -527,6 +419,7 @@ body {
 
             .links {
                 li {
+                    width:calc(49% - 1rem);
                     margin-left: 0;
                     margin-right: 1rem;
 
@@ -692,11 +585,99 @@ body {
         }
     }
 
-    .third-nav {
+    .search-nav {
         height: 45px;
         background: #47525b;
         position: relative;
         z-index: 1;
+
+        .search {
+            position: relative;
+            font-size: 14px;
+            line-height: 30px;
+            color: #fff;
+            z-index: 1;
+            float:right;
+            margin:7.5px 80px 7.5px 10px;
+
+            select {
+                vertical-align: middle;
+                display: inline-block;
+                line-height: 30px;
+                font-size: 14px;
+                color: #fff;
+                padding-left: 1em;
+                background-color: $light;
+
+                //@include opacity(0);
+                @include transition(all, 0.3s);
+                @include border-radius(15px 0 0 15px);
+                @include box;
+            }
+
+            option {
+                color: $text;
+            }
+
+            input[type=text] {
+                vertical-align: middle;
+                display: inline-block;
+                line-height: 30px;
+                font-size: 14px;
+                color: #fff;
+                width: 180px;
+                padding: 0 1em;
+                padding-right: 30px;
+                background: #2c343b;
+
+                //@include opacity(0);
+                @include transition(all, 0.3s);
+                @include border-radius(0 15px 15px 0);
+                @include box;
+            }
+
+            input[type=submit] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                vertical-align: middle;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: transparent;
+
+                @include transition(all, 0.5s);
+            }
+
+            &::after {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: "\f002";
+                font-family: "fontawesome";
+                text-align: center;
+                pointer-events: none;
+            }
+
+            @media screen and (max-width: $mobile2) {
+                float:none;
+                margin:1%;
+                margin-bottom:20px;
+                z-index:3;
+
+                form{
+                    display:flex;
+                    select{
+                        width:auto;
+                    }
+                    input[type="text"]{
+                        width:100%;
+                    }
+                }
+            }
+        }
 
         .links {
             li {
@@ -724,26 +705,33 @@ body {
 
         @media screen and (max-width: $mobile2) {
             //display: none;
-            position: relative;
+            position: fixed;
+            top:50px;
+            width:100%;
+            left:0;
             height: auto;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
-            background: none;
+            z-index:3;
 
             @include box;
+            display:none;
+
+                &.active{
+                    display:block;
+                }
 
             .links {
                 li {
                     width: 17%;
                     text-align: center;
 
-                    //border:1px solid rgba(255,255,255,.1);
+                    border:1px solid rgba(255,255,255,.3);
                     margin: 1%;
 
                     @include border-radius(15px);
                     @include box;
 
-                    background: $light;
+                    //background: $light;
 
                     a {
                         line-height: 30px;
@@ -1074,12 +1062,16 @@ body {
                     img {
                         height: 189px;
                         width: auto;
+
+                        @media screen and (max-width: $mobile) {
+                            height:220px;
+                        }
                     }
                 }
 
                 h3 {
                     color: $text;
-                    font-size: 13px;
+                    font-size: 14px;
                     line-height: 20px;
                     display: block;
                     display: -webkit-box;
@@ -1687,7 +1679,7 @@ body {
         width: 400px;
 
         @media screen and (max-width: $mobile) {
-            width: 100%;
+            width: calc(100% - 50px);
             float: none;
 
             //text-align:center;
