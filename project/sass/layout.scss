@@ -2157,12 +2157,23 @@ body {
         }
 
         @media screen and (max-width: $mobile) {
+            padding: 80px 0;
             .book-cover {
                 display: none;
             }
 
             .topics {
-                width: calc(100% - 60px);
+                width: calc(100% - 40px);
+                margin-left:20px;
+
+
+                ul {
+                    li{
+                        a{max-height: 50px;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;}
+                    }
+                }
             }
         }
     }
