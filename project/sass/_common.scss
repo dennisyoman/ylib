@@ -24,3 +24,58 @@ $mobile2:1000px;
     }
 }
 
+@keyframes bookFlipOut {
+  from {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(600px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  to {
+    -webkit-transform: perspective(600px);
+    transform: perspective(600px);
+  }
+}
+
+@keyframes bookFlipIn {
+  from {
+    -webkit-transform: perspective(600px);
+    transform: perspective(600px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(600px) rotate3d(0, 1, 0, -20deg);
+  }
+}
+@keyframes sideFlipOut {
+  from {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 70deg) translateX(10px);
+    transform: perspective(600px) rotate3d(0, 1, 0, 70deg) translateX(10px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  to {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 90deg) translateX(10px);
+    transform: perspective(600px) rotate3d(0, 1, 0, 90deg) translateX(10px);
+  }
+}
+
+@keyframes sideFlipIn {
+  from {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 90deg) translateX(10px);
+    transform: perspective(600px) rotate3d(0, 1, 0, 90deg) translateX(10px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 60deg) translateX(10px);
+    transform: perspective(600px) rotate3d(0, 1, 0, 60deg) translateX(10px);
+  }
+}
+

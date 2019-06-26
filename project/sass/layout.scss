@@ -1178,6 +1178,12 @@ body {
             border: none;
         }
 
+        >div{
+            > span {
+                display: block;
+            }
+        }
+
         a {
             text-decoration: none;
 
@@ -1189,6 +1195,29 @@ body {
         &:hover {
             .thumb {
                 @include translate(0, -10px);
+            }
+
+            .thumb3d {
+                animation-name: bookFlipIn;
+
+                > span {
+                    @include box-shadow(8px 4px 8px rgba(0, 0, 0, 0.4));
+
+                    img {
+                        @include opacity(0.3);
+                    }
+
+                    &::after {
+                        animation-name: sideFlipIn;
+                    }
+                }
+
+                .cart{
+                    @include opacity(1);
+                }
+                .discover{
+                    @include opacity(1);
+                }
             }
         }
 
@@ -1207,7 +1236,7 @@ body {
             @include opacity(0.4);
 
             &:hover {
-                @include opacity(1);
+                @include scale(1);
             }
 
             @media screen and (max-width: $mobile) {
@@ -1253,16 +1282,140 @@ body {
         .thumb {
             text-align: center;
             margin-bottom: 20px;
+            height: 189px;
 
             @include transition(all, 0.3s);
 
             img {
-                height: 189px;
-                width: auto;
+                max-height: 189px;
+                max-width: 100%;
 
                 @media screen and (max-width: $mobile) {
-                    height: 220px;
+                    max-height: 220px;
+                    max-width: 100%;
                 }
+            }
+
+            @media screen and (max-width: $mobile) {
+                height: 220px;
+            }
+        }
+
+        .thumb3d {
+            text-align: center;
+            margin-bottom: 20px;
+            height: 189px;
+            animation-name: bookFlipOut;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+
+            @include transition(all, 0.3s);
+
+            > span {
+                display: inline-block;
+                position: relative;
+                background: $text;
+
+                @include transition(all, 0.3s);
+
+                @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+
+                img {
+                    @include transition(opacity, 0.6s);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -10px;
+                    width: 20px;
+                    height: 100%;
+                    background-image: linear-gradient(#777, $third);
+                    animation-name: sideFlipOut;
+                    animation-duration: .3s;
+                    animation-fill-mode: both;
+                }
+            }
+
+            .cart{
+                top:50%;
+                left:50%;
+                width:40px;
+                height:40px;
+                margin-left:5px;
+                margin-top:-20px;
+                line-height: 40px;
+                text-align: center;
+                @include border-radius(100%);
+                background-image:url("../images/icon_cart.png");
+                background-size: 25px 20px;
+                z-index:5;
+                border:1px solid rgba(255,255,255,.3);
+                @include opacity(0);
+
+                &:hover {
+                    border:1px solid #fff;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    //@include opacity(1);
+                    //bottom:5px;
+                    //top:auto;
+                    //background-color:rgba(0,0,0,.7);
+                }
+            }
+
+            .discover {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                margin-top:-20px;
+                margin-right:5px;
+                z-index: 5;
+                border:1px solid rgba(255,255,255,.3);
+                line-height: 40px;
+                text-align: center;
+
+                @include transition(all, 0.3s);
+                @include opacity(0);
+                @include border-radius(100%);
+                color:#fff;
+                text-decoration: none;
+
+                &:hover {
+                    border:1px solid #fff;
+                }
+
+                &::after{
+                    content:"\f002";
+                    font-family: "fontawesome";
+                    font-size:22px;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    //@include opacity(1);
+                    //background-color:rgba(0,0,0,.7);
+                    //bottom:5px;
+                    //top:auto;
+                }
+            }
+
+            img {
+                max-height: 189px;
+                max-width: 100%;
+
+                @media screen and (max-width: $mobile) {
+                    max-height: 220px;
+                    max-width: 100%;
+                }
+            }
+
+            @media screen and (max-width: $mobile) {
+                height: 220px;
             }
         }
 
@@ -1779,7 +1932,7 @@ body {
                     }
                 }
 
-                >ul {
+                > ul {
                     text-align: left;
                     position: fixed;
                     top: 0;
@@ -1796,19 +1949,19 @@ body {
 
                     display: none;
 
-                    >li{
-                        >ul{
-                            >li{
-                                min-width:0 !important;
+                    > li {
+                        > ul {
+                            > li {
+                                min-width: 0 !important;
                                 width: auto;
-                                margin-right:15px;
+                                margin-right: 15px;
                             }
                         }
                     }
                 }
 
                 &.active {
-                    >ul {
+                    > ul {
                         display: block;
                     }
 
@@ -2158,20 +2311,22 @@ body {
 
         @media screen and (max-width: $mobile) {
             padding: 80px 0;
+
             .book-cover {
                 display: none;
             }
 
             .topics {
                 width: calc(100% - 40px);
-                margin-left:20px;
-
+                margin-left: 20px;
 
                 ul {
-                    li{
-                        a{max-height: 50px;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;}
+                    li {
+                        a {
+                            max-height: 50px;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                        }
                     }
                 }
             }
@@ -2209,22 +2364,21 @@ body {
                 border-top: 1px solid #ddd;
             }
 
-            &.result{
-                &::before,&::after{
-                    display:none !important;
+            &.result {
+                &::before, &::after {
+                    display: none !important;
                 }
 
-                >span{
-                    color:$light;
-                    font-weight:bold;
-                    font-size:14px;
+                > span {
+                    color: $light;
+                    font-weight: bold;
+                    font-size: 14px;
                 }
-                background:#fff;
-                float:right;
+
+                background: #fff;
+                float: right;
                 padding-left: 10px;
             }
-
-
         }
 
         &.filter {
@@ -2400,7 +2554,7 @@ body {
                 }
 
                 select {
-                    background-color:#fff;
+                    background-color: #fff;
                     background-image: url("../images/btn_dropdown_dark.png");
                 }
             }
@@ -2543,8 +2697,7 @@ body {
                 line-height: 50px;
                 border-bottom: 1px solid #e5e5e5;
 
-                &.has-children{
-
+                &.has-children {
                     &::before {
                         @include transition(all, 0.3s);
 
@@ -2554,51 +2707,54 @@ body {
                         margin-right: 5px;
                     }
 
-                    &.active{
-                        >ul{
-                            display:block;
+                    &.active {
+                        > ul {
+                            display: block;
                         }
+
                         &::before {
-                            content:"\f106";
-                            color:$light;
+                            content: "\f106";
+                            color: $light;
                         }
                     }
 
-                    >ul{
-                        display:none;
-                        padding:10px 0 20px;
+                    > ul {
+                        display: none;
+                        padding: 10px 0 20px;
 
-                        >li{
-                            display:inline-block;
+                        > li {
+                            display: inline-block;
                             line-height: 24px;
-                            min-width:50%;
-                            margin-bottom:2px;
-                            float:left;
+                            min-width: 50%;
+                            margin-bottom: 2px;
+                            float: left;
 
-                            >a{
-                                display:inline-block;
-                                color:$text;
+                            > a {
+                                display: inline-block;
+                                color: $text;
                                 line-height: 24px;
                                 text-decoration: none;
+
                                 @include border-radius(12px);
-                                &::before{
-                                    content:"．";
+
+                                &::before {
+                                    content: "．";
                                 }
 
-                                &:hover{
-                                    color:$light;
+                                &:hover {
+                                    color: $light;
                                 }
                             }
                         }
 
-                        &::after{
+                        &::after {
                             @include clear;
-                        };
+                        }
                     }
 
-                    &:hover{
+                    &:hover {
                         &::before {
-                            color:$light;
+                            color: $light;
                         }
                     }
                 }
@@ -2626,7 +2782,6 @@ body {
                             margin-right: 0;
                         }
                     }
-
                 }
 
                 &:last-child {
@@ -2638,7 +2793,7 @@ body {
                     line-height: 40px;
 
                     > a {
-                        display:block;
+                        display: block;
                         text-align: center;
                         font-size: 15px;
                         border: 1px solid $light;
@@ -3133,7 +3288,9 @@ body {
                 color: #666;
                 margin: 1px;
                 text-decoration: none;
+
                 //border: 1px solid #666;
+           
             }
 
             &:hover {
@@ -3146,7 +3303,9 @@ body {
                 a {
                     background: $main;
                     color: #fff;
+
                     //border-color: $main;
+               
                 }
             }
         }
