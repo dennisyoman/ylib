@@ -1237,7 +1237,7 @@ body {
             @include opacity(0.4);
 
             &:hover {
-                @include scale(1);
+                @include opacity(1);
             }
 
             @media screen and (max-width: $mobile) {
@@ -1436,8 +1436,28 @@ body {
             -webkit-line-clamp: 2;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 170px;
+            max-width: 200px;
             margin: 0 auto 20px;
+        }
+
+        .author{
+            text-align: center;
+            font-size:13px;
+            line-height: 13px;
+            color:$text;
+            margin: 0 auto 20px;
+            max-height: 13px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &::before{
+                content:"\f2c0";
+                font-family: "fontawesome";
+                color:$light;
+                margin-right:5px;
+            }
         }
 
         .price {
@@ -1842,8 +1862,28 @@ body {
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    max-width: 170px;
+                    max-width: 200px;
                     margin: 0 auto 20px;
+                }
+
+                .author{
+                    text-align: center;
+                    font-size:13px;
+                    line-height: 13px;
+                    color:$text;
+                    margin: 0 auto 20px;
+                    max-height: 13px;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &::before{
+                        content:"\f2c0";
+                        font-family: "fontawesome";
+                        color:$light;
+                        margin-right:5px;
+                    }
                 }
 
                 .price {
