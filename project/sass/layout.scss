@@ -1204,7 +1204,7 @@ body {
             background-size: 19.5px 19px;
 
             @include transition(all, 0.3s);
-            @include opacity(0.2);
+            @include opacity(0.4);
 
             &:hover {
                 @include opacity(1);
@@ -1456,7 +1456,7 @@ body {
                     background-size: 19.5px 19px;
 
                     @include transition(all, 0.3s);
-                    @include opacity(0.2);
+                    @include opacity(0.4);
 
                     &:hover {
                         @include opacity(1);
