@@ -1178,7 +1178,7 @@ body {
             border: none;
         }
 
-        >div{
+        > div {
             > span {
                 display: block;
             }
@@ -1212,10 +1212,11 @@ body {
                     }
                 }
 
-                .cart{
+                .cart {
                     @include opacity(1);
                 }
-                .discover{
+
+                .discover {
                     @include opacity(1);
                 }
             }
@@ -1338,24 +1339,27 @@ body {
                 }
             }
 
-            .cart{
-                top:50%;
-                left:50%;
-                width:40px;
-                height:40px;
-                margin-left:5px;
-                margin-top:-20px;
+            .cart {
+                top: 50%;
+                left: 50%;
+                width: 40px;
+                height: 40px;
+                margin-left: 5px;
+                margin-top: -20px;
                 line-height: 40px;
                 text-align: center;
+
                 @include border-radius(100%);
-                background-image:url("../images/icon_cart.png");
+
+                background-image: url("../images/icon_cart.png");
                 background-size: 25px 20px;
-                z-index:5;
-                border:1px solid rgba(255,255,255,.3);
+                z-index: 5;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+
                 @include opacity(0);
 
                 &:hover {
-                    border:1px solid #fff;
+                    border: 1px solid #fff;
                 }
 
                 @media screen and (max-width: $mobile) {
@@ -1373,27 +1377,28 @@ body {
                 position: absolute;
                 top: 50%;
                 right: 50%;
-                margin-top:-20px;
-                margin-right:5px;
+                margin-top: -20px;
+                margin-right: 5px;
                 z-index: 5;
-                border:1px solid rgba(255,255,255,.3);
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 line-height: 40px;
                 text-align: center;
 
                 @include transition(all, 0.3s);
                 @include opacity(0);
                 @include border-radius(100%);
-                color:#fff;
+
+                color: #fff;
                 text-decoration: none;
 
                 &:hover {
-                    border:1px solid #fff;
+                    border: 1px solid #fff;
                 }
 
-                &::after{
-                    content:"\f002";
+                &::after {
+                    content: "\f002";
                     font-family: "fontawesome";
-                    font-size:22px;
+                    font-size: 22px;
                 }
 
                 @media screen and (max-width: $mobile) {
@@ -1583,7 +1588,15 @@ body {
                     border: none;
                 }
 
-                a {
+                > div {
+                    text-decoration: none;
+
+                    > span {
+                        display: block;
+                    }
+                }
+
+                > a {
                     text-decoration: none;
 
                     > span {
@@ -1594,6 +1607,30 @@ body {
                 &:hover {
                     .thumb {
                         @include translate(0, -10px);
+                    }
+
+                    .thumb3d {
+                        animation-name: bookFlipIn;
+
+                        > span {
+                            @include box-shadow(8px 4px 8px rgba(0, 0, 0, 0.4));
+
+                            img {
+                                @include opacity(0.3);
+                            }
+
+                            &::after {
+                                animation-name: sideFlipIn;
+                            }
+                        }
+
+                        .cart {
+                            @include opacity(1);
+                        }
+
+                        .discover {
+                            @include opacity(1);
+                        }
                     }
                 }
 
@@ -1668,6 +1705,128 @@ body {
                         @media screen and (max-width: $mobile) {
                             height: 220px;
                         }
+                    }
+                }
+
+                .thumb3d {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    height: 189px;
+                    animation-name: bookFlipOut;
+                    animation-duration: .3s;
+                    animation-fill-mode: both;
+
+                    @include transition(all, 0.3s);
+
+                    > span {
+                        display: inline-block;
+                        position: relative;
+                        background: $text;
+
+                        @include transition(all, 0.3s);
+
+                        @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+
+                        img {
+                            @include transition(opacity, 0.6s);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: -10px;
+                            width: 20px;
+                            height: 100%;
+                            background-image: linear-gradient(#777, $third);
+                            animation-name: sideFlipOut;
+                            animation-duration: .3s;
+                            animation-fill-mode: both;
+                        }
+                    }
+
+                    .cart {
+                        top: 50%;
+                        left: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-left: 5px;
+                        margin-top: -20px;
+                        line-height: 40px;
+                        text-align: center;
+
+                        @include border-radius(100%);
+
+                        background-image: url("../images/icon_cart.png");
+                        background-size: 25px 20px;
+                        z-index: 5;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+
+                        @include opacity(0);
+
+                        &:hover {
+                            border: 1px solid #fff;
+                        }
+
+                        @media screen and (max-width: $mobile) {
+                            //@include opacity(1);
+                            //bottom:5px;
+                            //top:auto;
+                            //background-color:rgba(0,0,0,.7);
+                        }
+                    }
+
+                    .discover {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        top: 50%;
+                        right: 50%;
+                        margin-top: -20px;
+                        margin-right: 5px;
+                        z-index: 5;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        line-height: 40px;
+                        text-align: center;
+
+                        @include transition(all, 0.3s);
+                        @include opacity(0);
+                        @include border-radius(100%);
+
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            border: 1px solid #fff;
+                        }
+
+                        &::after {
+                            content: "\f002";
+                            font-family: "fontawesome";
+                            font-size: 22px;
+                        }
+
+                        @media screen and (max-width: $mobile) {
+                            //@include opacity(1);
+                            //background-color:rgba(0,0,0,.7);
+                            //bottom:5px;
+                            //top:auto;
+                        }
+                    }
+
+                    img {
+                        max-height: 189px;
+                        max-width: 100%;
+
+                        @media screen and (max-width: $mobile) {
+                            max-height: 220px;
+                            max-width: 100%;
+                        }
+                    }
+
+                    @media screen and (max-width: $mobile) {
+                        height: 220px;
                     }
                 }
 
