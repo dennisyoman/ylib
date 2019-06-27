@@ -1213,10 +1213,12 @@ body {
                 }
 
                 .cart {
+                    margin-left:5px;
                     @include opacity(1);
                 }
 
                 .discover {
+                    margin-right:5px;
                     @include opacity(1);
                 }
             }
@@ -1344,7 +1346,7 @@ body {
                 left: 50%;
                 width: 40px;
                 height: 40px;
-                margin-left: 5px;
+                margin-left: 15px;
                 margin-top: -20px;
                 line-height: 40px;
                 text-align: center;
@@ -1378,7 +1380,7 @@ body {
                 top: 50%;
                 right: 50%;
                 margin-top: -20px;
-                margin-right: 5px;
+                margin-right: 15px;
                 z-index: 5;
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 line-height: 40px;
@@ -1645,10 +1647,12 @@ body {
                         }
 
                         .cart {
+                            margin-left:5px;
                             @include opacity(1);
                         }
 
                         .discover {
+                            margin-right:5px;
                             @include opacity(1);
                         }
                     }
@@ -1770,7 +1774,7 @@ body {
                         left: 50%;
                         width: 40px;
                         height: 40px;
-                        margin-left: 5px;
+                        margin-left: 15px;
                         margin-top: -20px;
                         line-height: 40px;
                         text-align: center;
@@ -1804,7 +1808,7 @@ body {
                         top: 50%;
                         right: 50%;
                         margin-top: -20px;
-                        margin-right: 5px;
+                        margin-right: 15px;
                         z-index: 5;
                         border: 1px solid rgba(255, 255, 255, 0.3);
                         line-height: 40px;
