@@ -40,7 +40,13 @@ $(document).ready(
         //datepicker
         if ($(".datepicker").length > 0) {
             $( ".datepicker" ).datepicker({
-              dateFormat: "yy-mm-dd"
+              dateFormat: 'yy-mm',
+              changeYear: true,
+              changeMonth: true,
+              showButtonPanel: true,
+                onClose: function(dateText, inst) { 
+                    $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                }
             });
         }
 

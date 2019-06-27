@@ -332,12 +332,9 @@
                     <div class="close">出書日期檢索</div>
                     <form id="form_period" action="" method="post" onsubmit="return validatePeriod()">
                         <label for="period_start">起始日期</label>
-                        <input class="datepicker" type="text" name="period_start" id="period_start" placeholder="" />
-                        <br />
+                        <input class="datepicker" type="text" name="period_start" id="period_start" placeholder="" value=""/>
                         <label for="period_end">結束日期</label>
                         <input class="datepicker" type="text" name="period_end" id="period_end" placeholder="" />
-                        <br />
-                        
                         <input type="submit" value="搜尋"/>
                     </form>
                 </div>
@@ -347,10 +344,23 @@
             <!-- main-content start -->
             <div class="main">
 
-                <!-- 熱門新書 start -->
+                <!-- 出書日期檢索 start -->
+
+                <div class="period-box">
+                    <form id="form_period_top" action="" method="post" onsubmit="return validatePeriod()">
+                        <label for="period_start_top">起始日期</label>
+                        <input class="datepicker" type="text" name="period_start_top" id="period_start_top" placeholder="" />
+                        <label for="period_end_top">結束日期</label>
+                        <input class="datepicker" type="text" name="period_end_top" id="period_end_top" placeholder="" />
+                        <input type="submit" value="搜尋"/>
+                    </form>
+                </div>
+
                 <div class="section-title period">
-                    <span>2019年4月~2019年6月</span>
+                    <span>2019-04 至 2019-06</span>
                     <span class="result">共有<span>71</span>筆</span>
+
+
                 </div>
 
                 <div class="group-books4">
@@ -522,7 +532,7 @@
                     </div>
                  
                 </div>
-                <!-- 熱門新書 end -->
+                <!-- 出書日期檢索 end -->
 
                 <div class="pager">
                     <ul>

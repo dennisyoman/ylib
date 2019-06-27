@@ -2194,6 +2194,60 @@ body {
 }
 
 .main {
+    .period-box {
+        text-align: center;
+        background:$gray;
+        padding:15px 0;
+        @include box;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $mobile2) {
+            display:none;
+        }
+
+        form {
+
+            input[type="text"] {
+                font-size: 13px;
+                color: $text;
+                border: 1px solid #e5e5e5;
+                width: 150px;
+                line-height: 40px;
+
+                @include box;
+
+                padding: 0 2rem 0 1rem;
+                background: #fff url("../images/icon_calendar.png") no-repeat center right 1rem;
+                background-size: 12px 12px;
+                display:inline-block;
+                margin-right:20px;
+            }
+
+            label {
+                font-size: 13px;
+                color: $main;
+                line-height: 20px;
+                width:35px;
+                display:inline-block;
+                letter-spacing: 0.1em;
+            }
+
+            input[type="submit"] {
+                background: $light;
+                color: #fff;
+                text-align: center;
+                font-size: 15px;
+                line-height: 40px;
+                width:150px;
+                display:inline-block;
+
+                &:hover {
+                    background: $main;
+                }
+            }
+        }
+    }
+
     > .category {
         ul {
             padding: 20px 0;
@@ -2834,6 +2888,7 @@ body {
                 padding: 0 2rem 0 1rem;
                 background: #fff url("../images/icon_calendar.png") no-repeat center right 1rem;
                 background-size: 12px 12px;
+                margin-bottom:20px;
             }
 
             label {
@@ -3757,8 +3812,22 @@ option {
 .ui-datepicker {
     width: 340px !important;
     font-size: 18px !important;
+    z-index:1200 !important;
 
     @include box;
+
+    .ui-datepicker-year,.ui-datepicker-month{
+        margin:5px !important;
+        padding:2px 20px 2px 5px;
+        text-align: center !important;
+        width:auto !important;
+        border:1px solid #ddd;
+        background-image: url("../images/btn_dropdown_dark.png");
+    }
+
+    .ui-datepicker-calendar {
+        display: none;
+    }
 
     .ui-datepicker-next {
         text-align: center;
