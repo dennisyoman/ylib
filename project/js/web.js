@@ -22,8 +22,8 @@ $(document).ready(
         })
 
         //filter
-        if ($(".filter").length >= 1) {
-            $(".filter").find("a").click(function( index ) {
+        if ($(".group-filter").length >= 1) {
+            $(".group-filter").find("a").click(function( index ) {
                 $(this).addClass("selected").siblings(".selected").removeClass("selected");
                 //js換內容
             }).eq(0).click();
@@ -33,6 +33,7 @@ $(document).ready(
         if ($(".category").length >= 1) {
             $(".category").find("li").click(function( index ) {
                 $(this).addClass("selected").siblings(".selected").removeClass("selected");
+                console.log("clieck");
                 //js換內容
             }).eq(0).click();
         }
@@ -191,13 +192,13 @@ $(document).ready(
                 slidesPerGroup:1,
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-container-banner .swiper-pagination',
                     clickable:true,
                 },
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-container-banner .swiper-button-next',
+                    prevEl: '.swiper-container-banner .swiper-button-prev',
                 },
             })
         }
@@ -216,14 +217,14 @@ $(document).ready(
                 //centeredSlides: true,
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-container-life .swiper-pagination',
                     clickable:true,
                 },
 
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-container-life .swiper-button-next',
+                    prevEl: '.swiper-container-life .swiper-button-prev',
                 },
             })
         }
@@ -259,14 +260,14 @@ $(document).ready(
                 },
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-container-books5 .swiper-pagination',
                     clickable:true,
                 },
 
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-container-books5 .swiper-button-next',
+                    prevEl: '.swiper-container-books5 .swiper-button-prev',
                 },
             })
         }
@@ -298,14 +299,14 @@ $(document).ready(
                 },
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-container-books4 .swiper-pagination',
                     clickable:true,
                 },
 
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-container-books4 .swiper-button-next',
+                    prevEl: '.swiper-container-books4 .swiper-button-prev',
                 },
             })
         }
@@ -337,14 +338,14 @@ $(document).ready(
                 },
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-container-article3 .swiper-pagination',
                     clickable:true,
                 },
 
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-container-article3 .swiper-button-next',
+                    prevEl: '.swiper-container-article3 .swiper-button-prev',
                 },
             })
         }

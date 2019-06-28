@@ -4,7 +4,7 @@
 @import "./common";
 
 html, body, select, option, .modal, input {
-    font-family: "Heiti TC","儷黑 Pro", "LiHei Pro","文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "新細明體", sans-serif, Arial, Helvetica,'Montserrat';
+    font-family: 'Noto Sans TC', "Heiti TC","儷黑 Pro", "LiHei Pro","文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "新細明體", sans-serif, Arial, Helvetica,'Montserrat';
     font-size: 16px;
 }
 
@@ -195,7 +195,7 @@ body {
                 height: 26px;
                 text-align: center;
                 font-size: 14px;
-                font-weight: bold;
+                font-family: 'Montserrat';
                 color: #fff;
                 margin-left: 8px;
 
@@ -1022,39 +1022,51 @@ body {
 
     &.inverse {
         .intro {
-            left: 25%;
+            a{
+               right: auto;
+               left: 7%; 
+            }
         }
     }
 
     .intro {
-        position: absolute;
-        top: 50%;
-        left: 75%;
-        z-index: 2;
-        display: inline-block;
-        max-width: 40vw;
-        min-width: 350px;
-        border: 15px solid #fff;
-        padding: 10px;
-        text-decoration: none;
-        color: #fff;
+        position: relative;
+        height:100%;
 
-        @include box;
-        @include translate(-50%, -50%);
+        a{
+            position: absolute;
+            text-decoration: none;
+            max-width: 40vw;
+            min-width: 350px;
+            color: #fff;
+            top: 50%;
+            right: 7%;
+            z-index: 2;
+            border: 15px solid #fff;
+            padding: 10px;
+            display:inline-block;
+            @include box;
+            @include translate(0,-50%);
+        }
+
+        
 
         @media screen and (max-width: $mobile) {
-            top: auto;
-            bottom: 0;
-            left: 0 !important;
-            width: 100%;
-            padding: 1rem;
+            a{
+                top: auto;
+                bottom: 0;
+                left: 0 !important;
+                width: 100%;
+                padding: 1rem; 
+                @include translate(0, 0);
+                max-width: none;
+                min-width: 0;
+                border: none;
+                background: rgba(0, 0, 0, 0.46);
+            }
+            
 
-            @include translate(0, 0);
-
-            max-width: none;
-            min-width: 0;
-            border: none;
-            background: rgba(0, 0, 0, 0.46);
+            
         }
 
         &:hover {
@@ -1504,7 +1516,7 @@ body {
         margin: 0 auto;
     }
 
-    .filter {
+    .group-filter {
         text-align: right;
         margin-top: -25px;
 
@@ -1518,7 +1530,7 @@ body {
             text-decoration: none;
             line-height: 17px;
             color: #c2c2c2;
-            font-weight: bold;
+            font-weight: medium;
             padding: 0 15px;
             border-right: 1px solid #ddd;
             cursor: pointer;
@@ -3610,6 +3622,7 @@ body {
                 color: #fff;
                 line-height: 30px;
                 margin-bottom: 15px;
+                font-weight:medium;
 
                 &::before {
                     content: "";
