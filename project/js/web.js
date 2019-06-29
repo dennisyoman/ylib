@@ -29,11 +29,20 @@ $(document).ready(
             }).eq(0).click();
         }
 
+        //expand editor
+        
+        if ($(".editor").length >= 1) {
+            $(".editor").append('<div class="expand"></div>');
+            $(".editor .expand").click(function( index ) {
+                $(this).parent().toggleClass("active");
+                triviaContent.updateAutoHeight(600);
+            });
+        }
+
         //category
         if ($(".category").length >= 1) {
             $(".category").find("li").click(function( index ) {
                 $(this).addClass("selected").siblings(".selected").removeClass("selected");
-                console.log("clieck");
                 //js換內容
             }).eq(0).click();
         }
@@ -127,15 +136,22 @@ $(document).ready(
                 // Optional parameters
                 spaceBetween: 0,
                 slidesPerView: 'auto',
-                freeMode: true,
+                //freeMode: true,
                 watchSlidesVisibility: true,
-                watchSlidesProgress: true,
+                //watchSlidesProgress: true,
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.trivia .swiper-button-next',
+                    prevEl: '.trivia .swiper-button-prev',
+                },
             })
             var triviaContent = new Swiper('.swiper-container-trivia.trivia-content', {
                 // Optional parameters
                 slidesPerView: 1,
                 //zoom: true,
                 //grabCursor: true,
+                effect:'fade',
+                allowTouchMove: false,
                 autoHeight: true, //enable auto height
                 thumbs: {
                   swiper: triviaTabs,
@@ -241,17 +257,13 @@ $(document).ready(
                 slidesPerGroup:5,
                 //centeredSlides: true,
                 breakpoints: {
-                    400: {
+                    600: {
                       slidesPerView: 1,
                       slidesPerGroup:1,
                     },
-                    600: {
+                    800: {
                       slidesPerView: 2,
                       slidesPerGroup:2,
-                    },
-                    800: {
-                      slidesPerView: 3,
-                      slidesPerGroup:3,
                     },
                     1000: {
                       slidesPerView: 4,
@@ -332,8 +344,8 @@ $(document).ready(
                       slidesPerGroup:2,
                     },
                     1000: {
-                      slidesPerView: 2,
-                      slidesPerGroup:2,
+                      slidesPerView: 3,
+                      slidesPerGroup:3,
                     },
                 },
                 // If we need pagination

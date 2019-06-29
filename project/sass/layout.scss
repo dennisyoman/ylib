@@ -6,6 +6,8 @@
 html, body, select, option, .modal, input {
     font-family: 'Noto Sans TC', "Heiti TC","儷黑 Pro", "LiHei Pro","文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", "新細明體", sans-serif, Arial, Helvetica,'Montserrat';
     font-size: 16px;
+    line-height: 1.5;
+    font-weight:300;
 }
 
 body {
@@ -14,6 +16,65 @@ body {
 
     @media screen and (max-width: $mobile2) {
         padding-top: 50px;
+    }
+}
+
+.editor{
+    position:relative;
+    line-height: 1.8;
+    max-height:350px;
+    overflow: hidden;
+
+    &.active{
+        max-height:none;
+        padding-bottom:40px;
+
+        .expand{
+            background:none;
+            top:auto;
+            bottom:0;
+            &:before{
+                content:"收合";
+            }
+            &:after{
+                margin-left:8px;
+                content:"\f106";
+                font-family:"fontawesome";
+            }
+        }
+    }
+
+    .expand{
+        position:absolute;
+        z-index:5;
+        font-size:13px;
+        color:$light;
+        text-align: center;
+        line-height: 15px;
+        padding-top:35px;
+        width:100%;
+        height:50px;
+        left:0;
+        top:300px;
+        bottom:0;
+        background-image: linear-gradient(rgba(255,255,255,0), #fff 80%, #fff);
+        @include box;
+        &:before{
+            content:"展開";
+        }
+        &:after{
+            margin-left:8px;
+            content:"\f107";
+            font-family:"fontawesome";
+        }
+        @media screen and (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+}
+.normal-content{
+    h3,h2,h1,p{
+        margin-bottom:1em;
     }
 }
 
@@ -821,6 +882,7 @@ body {
                 color: #fff;
                 padding-left: 1em;
                 background-color: $light;
+                height:30px;
 
                 //@include opacity(0);
                 @include transition(all, 0.3s);
@@ -836,6 +898,7 @@ body {
                 vertical-align: middle;
                 display: inline-block;
                 line-height: 30px;
+                height:30px;
                 font-size: 14px;
                 color: #fff;
                 width: 180px;
@@ -1270,6 +1333,29 @@ body {
             margin-bottom: 10px;
         }
 
+        .cat {
+            font-size: 13px;
+            color: #fff;
+            line-height: 22px;
+            padding: 0 8px;
+            background: $main;
+            width: auto;
+            display: inline-block;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .life {
+            font-size: 13px;
+            color: #fff;
+            line-height: 22px;
+            padding: 0 8px;
+            background: $yt;
+            width: auto;
+            display: inline-block;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
         .rank {
             font-size: 13px;
             color: #fff;
@@ -1440,18 +1526,25 @@ body {
 
         h3 {
             color: $text;
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 15px;
+            line-height: 22px;
             display: block;
             display: -webkit-box;
-            height: 40px;
-            max-height: 40px;
+            height: 44px;
+            max-height: 44px;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 200px;
             margin: 0 auto 20px;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 16px;
+                line-height: 24px;
+                height: 48px;
+                max-height: 48px;
+            }
         }
 
         .author{
@@ -1478,14 +1571,33 @@ body {
             display: block;
             text-align: center;
             margin: 0 auto;
-            color: $second;
-            font-size: 40px;
-            line-height: 1em;
-            font-family: 'Montserrat';
+            
+            line-height: 40px;
+            
             font-weight: 100;
+            color:$red;
 
             span {
+                color: $second;
                 position: relative;
+                font-size: 40px;
+                font-family: 'Montserrat';
+                margin-left:20px;
+
+                &.dis{
+                    font-size: 12px;
+                    color: $main;
+                    line-height: 18px;
+                    height:18px;
+                    padding: 0 6px;
+                    border:1px solid $light;
+                    width: auto;
+                    display: inline-block;
+                    margin: 0 5px;
+                    &::after {
+                        display:none;
+                    }
+                }
 
                 &::after {
                     content: "";
@@ -1505,6 +1617,7 @@ body {
 .swiper {
     width: 100%;
     padding: 50px 0;
+    position:relative;
 
     h2 {
         font-size: 17px;
@@ -1530,7 +1643,7 @@ body {
             text-decoration: none;
             line-height: 17px;
             color: #c2c2c2;
-            font-weight: medium;
+            font-weight: 500;
             padding: 0 15px;
             border-right: 1px solid #ddd;
             cursor: pointer;
@@ -1577,6 +1690,7 @@ body {
             .swiper-wrapper {
                 .swiper-slide {
                     border: none !important;
+                    padding:0 33px;
 
                     .thumb {
                         text-align: center;
@@ -1704,6 +1818,29 @@ body {
                     margin-bottom: 10px;
                 }
 
+                .cat {
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 22px;
+                    padding: 0 8px;
+                    background: $main;
+                    width: auto;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    position: relative;
+                }
+
+                .life {
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 22px;
+                    padding: 0 8px;
+                    background: $yt;
+                    width: auto;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+
                 .rank {
                     font-size: 13px;
                     color: #fff;
@@ -1812,6 +1949,8 @@ body {
                         }
                     }
 
+
+
                     .discover {
                         display: inline-block;
                         width: 40px;
@@ -1868,18 +2007,25 @@ body {
 
                 h3 {
                     color: $text;
-                    font-size: 14px;
-                    line-height: 20px;
+                    font-size: 15px;
+                    line-height: 22px;
                     display: block;
                     display: -webkit-box;
-                    height: 40px;
-                    max-height: 40px;
+                    height: 44px;
+                    max-height: 44px;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     max-width: 200px;
                     margin: 0 auto 20px;
+
+                    @media screen and (max-width: $mobile) {
+                        font-size: 16px;
+                        line-height: 24px;
+                        height: 48px;
+                        max-height: 48px;
+                    }
                 }
 
                 .author{
@@ -1906,14 +2052,33 @@ body {
                     display: block;
                     text-align: center;
                     margin: 0 auto;
-                    color: $second;
-                    font-size: 40px;
-                    line-height: 1em;
-                    font-family: 'Montserrat';
+                    
+                    line-height: 40px;
+                    
                     font-weight: 100;
+                    color:$red;
 
                     span {
+                        color: $second;
                         position: relative;
+                        font-size: 40px;
+                        font-family: 'Montserrat';
+                        margin-left:20px;
+
+                        &.dis{
+                            font-size: 12px;
+                            color: $main;
+                            line-height: 18px;
+                            height:18px;
+                            padding: 0 6px;
+                            border:1px solid $light;
+                            width: auto;
+                            display: inline-block;
+                            margin: 0 5px;
+                            &::after {
+                                display:none;
+                            }
+                        }
 
                         &::after {
                             content: "";
@@ -1947,27 +2112,34 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 27px;
-                height: 27px;
-                line-height: 25px;
+                width: 25px;
+                height: 25px;
+                line-height: 23px;
                 text-align: center;
-                color: #ccc;
+                color: #999;
                 font-size: 18px;
-                border: 1px solid #ccc;
+                border: 1px solid #999;
                 font-family: "fontawesome";
+                background:#fff;
 
                 @include box;
 
                 @include border-radius(100%);
+
+                @media screen and (max-width: $mobile) {
+                    border:none;
+                    font-size:25px;
+                    background:none;
+                }
             }
         }
 
         .swiper-button-next {
-            right: 3px;
+            right: 0px;
         }
 
         .swiper-button-prev {
-            left: 3px;
+            left: 0px;
 
             &::after {
                 content: "\f104";
@@ -2225,6 +2397,7 @@ body {
                 border: 1px solid #e5e5e5;
                 width: 150px;
                 line-height: 40px;
+                height:40px;
 
                 @include box;
 
@@ -2250,6 +2423,7 @@ body {
                 text-align: center;
                 font-size: 15px;
                 line-height: 40px;
+                height:40px;
                 width:150px;
                 display:inline-block;
 
@@ -2304,7 +2478,7 @@ body {
                     margin-left: 6%;
                 }
 
-                //overflow: hidden;
+                overflow: hidden;
                 .swiper-wrapper {
                     width: 100%;
 
@@ -2707,6 +2881,35 @@ body {
 
         .trivia {
             width: 100%;
+            position:relative;
+
+            .swiper-button-next, .swiper-button-prev {
+                outline: none;
+                background:none;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                color: $main;
+                font-size: 15px;
+                top:20px;
+                right:-25px;
+                &::after {
+                    content: "\f105";
+                    font-family: "fontawesome";
+                }
+            }
+            .swiper-button-prev {
+                right:auto;
+                left:-25px;
+                &::after {
+                    content: "\f104";
+                }
+            }
+
+            .swiper-button-disabled {
+                @include opacity(0);
+            }
 
             .trivia-content {
                 width: 100%;
@@ -2719,6 +2922,7 @@ body {
 
                     .swiper-slide {
                         width: 100%;
+                        background:#fff;
                     }
                 }
             }
@@ -2742,9 +2946,15 @@ body {
                         font-size: 15px;
                         color: $text;
                         line-height: 15px;
-                        padding: 0 15px;
+                        display:inline-block;
                         cursor: pointer;
                         border-left: 1px solid $text;
+                        &::after,&::before{
+                            content:"";
+                            display:inline-block;
+                            width:15px;
+                        }
+                        
 
                         @include box;
 
@@ -2812,6 +3022,7 @@ body {
                     font-size: 17px;
                     color: $text;
                     line-height: 38px;
+                    height:38px;
                     padding: 0 30px;
 
                     @include transition(all, 0.3s);
@@ -2894,6 +3105,7 @@ body {
                 border: 1px solid #e5e5e5;
                 width: 100%;
                 line-height: 30px;
+                height:30px;
 
                 @include box;
 
@@ -2916,6 +3128,7 @@ body {
                 margin-bottom: 20px;
                 font-size: 15px;
                 line-height: 40px;
+                height:40px;
                 width: 100%;
 
                 //width:50%;
@@ -3622,7 +3835,7 @@ body {
                 color: #fff;
                 line-height: 30px;
                 margin-bottom: 15px;
-                font-weight:medium;
+                font-weight:500;
 
                 &::before {
                     content: "";

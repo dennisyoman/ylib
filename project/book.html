@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/swiper.min.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700&display=swap&subset=chinese-traditional" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- javascript -->
@@ -485,6 +485,9 @@
 
                 <div class="trivia-container">
                     <div class="trivia">
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                         <div class="swiper-container-trivia trivia-tabs">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">內容簡介</div>
@@ -502,47 +505,59 @@
                             <div class="swiper-wrapper">
                                 <!-- 內容簡介 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">
+                                        內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位 內容簡介 這是編輯器的欄位
+                                    </div>
                                 </div>
 
                                 <!-- 各界推薦 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 各界推薦 這是編輯器的欄位 </div>
                                 </div>
 
                                 <!-- 作者．譯者簡介 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 作者．譯者簡介 </div>
                                 </div>
 
                                 <!-- 目錄 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">這是編輯器的欄位 目錄 這是編輯器的欄位 目錄 這是編輯器的欄位 目錄 這是編輯器的欄位 目錄 這是編輯器的欄位 目錄 這是編輯器的欄位 目錄 </div>
                                 </div>
 
                                 <!-- 序文前言 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 序文前言 這是編輯器的欄位 </div>
                                 </div>
 
                                 <!-- 導讀推薦 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">這是編輯器的欄位 導讀推薦 這是編輯器的欄位 導讀推薦 這是編輯器的欄位 導讀推薦 這是編輯器的欄位 導讀推薦 這是編輯器的欄位 導讀推薦 </div>
                                 </div>
 
                                 <!-- 精彩試閱 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 精彩試閱 這是編輯器的欄位 </div>
                                 </div>
 
                                 <!-- 編輯手記 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="editor">編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 編輯手記 </div>
                                 </div>
 
                                 <!-- 產品規格 -->
                                 <div class="swiper-slide">
-                                    <div class="editor">這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位 這是編輯器的欄位</div>
+                                    <div class="normal-content">
+                                        <p>書號：YLR194</p>
+                                        <p>裝訂：平裝</p>
+                                        <p>尺寸：14.8 × 21 cm</p>
+                                        <p>類別：社會科學類</p>
+                                        <p>分類號：528.2</p>
+                                        <p>頁數：368頁</p>
+                                        <p>重量：500公克</p>
+                                        <p>出版社：遠流出版</p>
+                                        <p>ISBN：9789573285380</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -703,17 +718,22 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <span class="thumb"><img src="images/pic1.png"/></span>
+                                    <span class="thumb">
+                                        <img src="images/pic1.png"/>
+                                    </span>
+
                                     <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
                                 </a>
                             </div>
                         </div>
-
+                        
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
+                        
                        
                     </div>
+
                 </div>
                 <!-- 讀享生活 end -->
 
