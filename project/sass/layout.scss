@@ -2967,6 +2967,38 @@ body {
                         }
                     }
                 }
+
+                @media screen and (max-width: 1250px) {
+                    height:auto;
+                    overflow: visible;
+                    margin-bottom: 50px;
+                    .swiper-wrapper {
+                        height:auto !important;
+                        display:block;
+                        .swiper-slide {
+                            border:1px solid $text;
+                            line-height: 28px !important;
+                            height:30px !important;
+                            float:left;
+                            margin:5px 3px;
+                            width:calc(49.5% - 6px);
+                            text-align: center;
+                            max-width:180px;
+
+                            &::after,&::before{
+                                display:none;
+                            }
+
+                            &.swiper-slide-thumb-active {
+                                background: $light;
+                                color:#fff;
+                            }
+                        }
+                        &::after{
+                            @include clear;
+                        }
+                    }
+                }
             }
         }
     }

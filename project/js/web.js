@@ -136,9 +136,14 @@ $(document).ready(
                 // Optional parameters
                 spaceBetween: 0,
                 slidesPerView: 'auto',
-                //freeMode: true,
+                freeMode: true,
                 watchSlidesVisibility: true,
-                //watchSlidesProgress: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    650: {
+                        allowTouchMove: false,
+                    },
+                },
                 // Navigation arrows
                 navigation: {
                     nextEl: '.trivia .swiper-button-next',
