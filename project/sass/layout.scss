@@ -2246,6 +2246,7 @@ body {
                 top: 20px;
                 right: 50%;
                 z-index: 1;
+                @include transition(all,.6s);
             }
 
             &:first-child {
@@ -2290,10 +2291,14 @@ body {
                     background: $light;
                     color: #fff;
                     border-color: $light;
+                    animation-name: popIn;
+                    animation-duration: .6s;
+                    animation-fill-mode: both;
+                    
                 }
 
                 &::after {
-                    border-top: 1px solid $light;
+                    border-color:$light;
                 }
 
                 span:last-child {

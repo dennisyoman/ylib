@@ -79,3 +79,29 @@ $mobile2:1000px;
   }
 }
 
+@keyframes popIn {
+    0% {
+        @include scale(0);
+    }
+
+    50% {
+        @include scale(1.4);
+    }
+
+    75% {
+        @include scale(0.8);
+    }
+
+    85% {
+        @include scale(1.15);
+    }
+
+    95% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
+
