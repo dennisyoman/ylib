@@ -2620,8 +2620,6 @@ body {
                     &:focus{
                         border-color:$light;
                     }
-
-                    background:#fff;
                 }
 
                 select, option {
@@ -2631,7 +2629,7 @@ body {
                     text-align: center;
                     border: 1px solid #999;
                     max-width:100%;
-                    background:#fff;
+                    background-color:#fff;
                 }
 
                 select {
@@ -3169,7 +3167,7 @@ body {
                         line-height: 23px;
                         text-align: center;
                         border: 1px solid #999;
-                        background:#fff;
+                        background-color:#fff;
                     }
 
                     select {
@@ -3258,7 +3256,7 @@ body {
                         line-height: 23px;
                         text-align: center;
                         border: 1px solid #999;
-                        background:#fff;
+                        background-color:#fff;
                     }
 
                     select {
