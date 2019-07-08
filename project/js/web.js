@@ -136,11 +136,10 @@ $(document).ready(
                 // Optional parameters
                 spaceBetween: 0,
                 slidesPerView: 'auto',
-                freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
                 breakpoints: {
-                    650: {
+                    700: {
                         allowTouchMove: false,
                     },
                 },
