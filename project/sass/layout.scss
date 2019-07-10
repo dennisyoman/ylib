@@ -2765,258 +2765,6 @@ body {
 
     }
 
-    .saved-list {
-        padding: 2rem 2rem;
-
-        @include box;
-
-        margin-bottom: 20px;
-        background: #fff;
-        border: 1px solid #eee;
-
-        .table {
-            font-size: 15px;
-            color: $text;
-            line-height: 1.5;
-
-            .head, .item {
-                display: flex;
-                align-items: stretch;
-
-                > div {
-                    padding: 30px 10px;
-
-                    @include box;
-
-                    display: inline-block;
-                    flex: 0 0 100px;
-                    position:relative;
-
-                    h3{
-                        display:none;
-                    }
-
-                    &:nth-child(1) {
-                        flex: 1 1 100%;
-                    }
-
-                    &:nth-child(2) {
-                        flex: 0 0 80px;
-                    }
-
-                    &:nth-child(5) {
-                        flex: 0 0 120px;
-                    }
-
-                    &:nth-child(6) {
-                        flex: 0 0 90px;
-                    }
-                    &:nth-child(7) {
-                        flex: 0 0 90px;
-                    }
-
-                    input[type="number"], input[type="text"] {
-                        max-width: 100%;
-                        min-width: 1px;
-                        width: 50px;
-                        height: 23px;
-                        line-height: 23px;
-                        text-align: center;
-                        border: none;
-                        border: 1px solid #999;
-                    }
-
-                    input[type="radio"] {
-                        margin: 5px 3px 0 0;
-                    }
-
-                    input[type="radio"] + label {
-                        width: calc(100% - 20px);
-                        float: right;
-                    }
-
-                    > div {
-                        &::after {
-                            @include clear;
-                        }
-                    }
-
-                    span {
-                        color: $light;
-
-                        //font-weight:bold;
-                   
-                    }
-
-                    a.save, a.delete {
-                        display: block;
-                        text-decoration: none;
-
-                        //background:$light;
-                        color: $main;
-                        font-size: 13px;
-                        line-height: 23px;
-                        margin-bottom: 4px;
-                        text-align: center;
-                        border: 1px solid $main;
-
-                        &::before {
-                            content: "\f07a";
-                            font-family: "fontawesome";
-                            margin-right: 5px;
-                        }
-
-                        &:hover {
-                            background: $light;
-                            color: #fff;
-                        }
-                    }
-
-                    a.delete {
-                        color: $red;
-                        border: 1px solid $red;
-
-                        &::before {
-                            content: "\f1f8";
-                            font-family: "fontawesome";
-                            margin-right: 5px;
-                        }
-
-                        &:hover {
-                            background: $red;
-                            color: #fff;
-                        }
-                    }
-
-                    .thumb {
-                        width: 40%;
-                        max-width: 80px;
-                        float: left;
-                        margin-right: 15px;
-
-                        img {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-
-                    .title {
-                        overflow: visible;
-
-                        span {
-                            color: #aaa;
-                            display: block;
-                            font-size: 12px;
-                            margin: 5px 0;
-                        }
-                    }
-
-                    &::after {
-                        @include clear;
-                    }
-                }
-            }
-
-            .head {
-                border-bottom: 2px solid $text;
-                letter-spacing: 0.1em;
-
-                > div {
-                    &:nth-child(1) {
-                        &::before {
-                            color: $light;
-                            content: "\f019";
-                            font-family: "fontawesome";
-                            margin-right: 5px;
-                        }
-                    }
-                }
-            }
-
-            .item {
-                border-bottom: 1px solid #ddd;
-
-                &:last-child {
-                    //border-bottom: 1px solid $text;
-               
-                }
-
-                &:hover {
-                    background: #fafafa;
-                }
-            }
-            @media screen and (max-width: $mobile) {
-                .head {
-                    display: block;
-                    >div{
-                        padding:10px 0;
-                        display:none;
-                        &:nth-child(1){
-                            display:inline-block;
-                            width:100%;
-                        }
-                    }
-                }
-                .item {
-                    display: block;
-                    padding:20px 10px;
-                    text-align: center;
-                    >div{
-                        padding:5px 0;
-                        text-align: left;
-
-                        h3{
-                            display:block;
-                            position:absolute;
-                            top:5px;
-                            left:10px;
-                            width:20%;
-                        }
-                        &:nth-child(1) {
-                           width:100%;
-                        }
-
-                        &:nth-child(2) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-                        &:nth-child(3) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-
-                        &:nth-child(4) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-
-                        &:nth-child(5) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-                        &:nth-child(6) {
-                            width:40%;
-                            margin:4px;
-                            text-align: center;
-                        }
-
-                        &:nth-child(7) {
-                            width:40%;
-                            margin:4px;
-                            text-align: center;
-                        }
-
-                        .thumb {
-                            width:28%;
-                            margin-right:2%;
-                            max-width:9999px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .shopping-list {
         padding: 2rem 2rem;
 
@@ -3167,7 +2915,7 @@ body {
                     }
 
                     select, option {
-                        width: 65px;
+                        width: auto;
                         padding-left: 5px;
                         height: 23px;
                         line-height: 23px;
@@ -3302,7 +3050,7 @@ body {
                     @include box;
 
                     display: inline-block;
-                    flex: 0 0 100px;
+                    flex: 0 0 85px;
                     position:relative;
 
                     h3{
@@ -3313,21 +3061,10 @@ body {
                         flex: 1 1 100%;
                     }
 
-                    &:nth-child(2) {
-                        flex: 0 0 80px;
+                    &.lg{
+                        flex: 0 0 150px;
                     }
 
-                    &:nth-child(4) {
-                        flex: 0 0 140px;
-                    }
-
-                    &:nth-child(5) {
-                        flex: 0 0 160px;
-                    }
-
-                    &:nth-child(7) {
-                        flex: 0 0 90px;
-                    }
 
                     input[type="number"], input[type="text"] {
                         max-width: 100%;
@@ -3353,6 +3090,20 @@ body {
                         &::after {
                             @include clear;
                         }
+                    }
+
+                    select, option {
+                        width: auto;
+                        padding-left: 5px;
+                        height: 23px;
+                        line-height: 23px;
+                        text-align: center;
+                        border: 1px solid #999;
+                        background-color:#fff;
+                    }
+
+                    select {
+                        background-image: url("../images/btn_dropdown_dark.png");
                     }
 
                     span {
@@ -3435,6 +3186,16 @@ body {
                 border-bottom: 2px solid $text;
                 letter-spacing: 0.1em;
 
+                &.saved{
+                    > div {
+                        &:nth-child(1) {
+                            &::before {
+                                content: "\f019";
+                            }
+                        }
+                    }
+                }
+
                 > div {
                     &:nth-child(1) {
                         &::before {
@@ -3477,6 +3238,8 @@ body {
                     padding:20px 10px;
                     >div{
                         padding:5px 0;
+                        width:100%;
+                        padding-left:30%;
 
                         h3{
                             display:block;
@@ -3487,39 +3250,13 @@ body {
                         }
                         &:nth-child(1) {
                            width:100%;
+                           padding-left:0;
                         }
 
-                        &:nth-child(2) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-                        &:nth-child(3) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-
-                        &:nth-child(4) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-
-                        &:nth-child(5) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-                        &:nth-child(6) {
-                            width:100%;
-                            padding-left:30%;
-                        }
-
-                        &:nth-child(7) {
-                            width:100%;
-                            text-align: center;
-                            a{
-                                display:inline-block;
-                                width:40%;
-                                margin:4px;
-                            }
+                        a.save, a.delete {
+                            display:inline-block;
+                            width:40%;
+                            margin:4px;
                         }
 
                         .thumb {
