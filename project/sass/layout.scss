@@ -896,6 +896,7 @@ body {
                 padding-left: 1em;
                 background-color: $light;
                 height: 30px;
+                flex:0 0 auto;
 
                 //@include opacity(0);
                 @include transition(all, 0.3s);
