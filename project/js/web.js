@@ -29,6 +29,24 @@ $(document).ready(
             }).eq(0).click();
         }
 
+        //quantity
+        if ($(".quantity").length >= 1) {
+            $(".quantity").find("span.decrease").click(function( index ) {
+                var tempQ = parseInt($(this).parent().find("input").val());
+                var min = $(this).parent().attr("min")?parseInt($(this).parent().attr("min")) : 1;
+                if(tempQ>min){
+                    $(this).parent().find("input").val(tempQ - 1);
+                }
+            });
+            $(".quantity").find("span.add").click(function( index ) {
+                var tempQ = parseInt($(this).parent().find("input").val());
+                var max = $(this).parent().attr("max")?parseInt($(this).parent().attr("max")) : 99;
+                if(tempQ<max){
+                    $(this).parent().find("input").val(tempQ + 1);
+                }
+            });
+        }
+
         //expand editor
         
         if ($(".editor").length >= 1) {
