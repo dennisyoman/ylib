@@ -149,7 +149,7 @@ $(document).ready(
         }
 
         //initialize swiper when document ready
-        if ($(".swiper-container-trivia").length > 0) {
+        if ($(".swiper-container-trivia2").length > 0) {
             var triviaTabs = new Swiper('.swiper-container-trivia.trivia-tabs', {
                 // Optional parameters
                 spaceBetween: 0,
