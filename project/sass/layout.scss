@@ -3060,6 +3060,11 @@ body {
                         cursor: pointer;
                         float: left;
 
+                        @media screen and (max-width: $mobile) {
+                            width: 35px;
+                            font-size: 15px;
+                        }
+
                         &::after {
                             content: "\f067";
                             display: inline-block;
