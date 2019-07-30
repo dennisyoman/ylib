@@ -3051,7 +3051,7 @@ body {
                 .quantity {
                     > span {
                         display: inline-block;
-                        width: 16px;
+                        width: 26px;
                         height: 25px;
                         line-height: 25px;
                         text-align: center;
@@ -3087,7 +3087,7 @@ body {
                     }
 
                     input {
-                        width: calc(100% - 32px) !important;
+                        width: calc(100% - 52px) !important;
                         display: inline-block;
                         float: left;
 
@@ -3120,6 +3120,9 @@ body {
 
                     &.lg {
                         flex: 0 0 150px;
+                    }
+                    &.md {
+                        flex: 0 0 105px;
                     }
 
                     input[type="number"], input[type="text"] {
@@ -3187,6 +3190,12 @@ body {
                             margin-right: 5px;
                         }
 
+                        
+                    }
+
+                    a.save{
+                        background: $light;
+                        color: #fff;
                         &:hover {
                             background: $light;
                             color: #fff;
@@ -3194,8 +3203,8 @@ body {
                     }
 
                     a.delete {
-                        color: $red;
-                        border: 1px solid $red;
+                        color: #aaa;
+                        border: 1px solid #aaa;
 
                         &::before {
                             content: "\f1f8";
@@ -3204,8 +3213,10 @@ body {
                         }
 
                         &:hover {
-                            background: $red;
-                            color: #fff;
+                            color: $red;
+                            border: 1px solid $red;
+                            //background: $red;
+                            //color: #fff;
                         }
                     }
 
