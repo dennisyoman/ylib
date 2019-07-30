@@ -2789,7 +2789,7 @@ body {
                 span {
                     color: $light;
 
-                    font-weight:bold;
+                    font-weight:700;
                
                 }
 
@@ -3030,7 +3030,6 @@ body {
                     span {
                         color: $light;
                         font-size: 13px;
-                        font-weight:bold;
                     }
                 }
             }
@@ -3117,6 +3116,10 @@ body {
 
                     &:nth-child(1) {
                         flex: 1 1 100%;
+
+                        span{
+                            font-weight: 300;
+                        }
                     }
 
                     &.lg {
@@ -3169,7 +3172,7 @@ body {
                     span {
                         color: $light;
 
-                        font-weight:bold;
+                        font-weight:700;
                    
                     }
 
