@@ -3424,11 +3424,6 @@ body {
   font-family: "fontawesome";
   margin-right: 5px;
 }
-/* line 3196, ../sass/layout.scss */
-.main .shopping-list .table .head > div a.save, .main .shopping-list .table .item > div a.save {
-  background: #65a74e;
-  color: #fff;
-}
 /* line 3199, ../sass/layout.scss */
 .main .shopping-list .table .head > div a.save:hover, .main .shopping-list .table .item > div a.save:hover {
   background: #65a74e;
