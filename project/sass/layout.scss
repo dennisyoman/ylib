@@ -4180,7 +4180,7 @@ body {
         font-size: 20px;
         color: $text;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align:center;
         //border-top:2px solid #ddd;
         border:1px solid #ddd;
@@ -4207,12 +4207,12 @@ body {
             }
             .captcha{
                 font-size:15px;
-                padding:0 20px;
                 line-height: 40px;
                 height: 40px;
                 background:#ddd;
                 margin-left:5px;
                 color:$main;
+                flex: 0 0 100px;
             }
             input[type="text"] {
                 font-size: 15px;

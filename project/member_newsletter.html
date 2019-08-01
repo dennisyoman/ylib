@@ -41,6 +41,7 @@
     <script src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/captcha-mini.js"></script>
     
 </head>
 
@@ -186,10 +187,10 @@
                     <span>我要訂閱 / 取消電子報</span>
                     <br /><br /><br /><br />
                     <form id="newsletter" class="newsletter" action="" method="post" onsubmit="return validateNewsletter()">
-                        <input type="text" name="email" id="email" placeholder="輸入您的e-mail" />
+                        <input type="text" name="email" placeholder="輸入您的e-mail" />
                         <div class="multicol">
-                            <input type="text" name="CAPTCHA" id="CAPTCHA" placeholder="輸入驗證碼" />
-                            <div class="captcha">1234</div>
+                            <input type="text" name="captcha" placeholder="輸入驗證碼" />
+                            <div class="captcha" title="點我換驗證碼"><canvas width="100" height="40" id="captcha"></canvas></div>
                         </div>
                         <input type="submit" value="確定" />
                     </form>

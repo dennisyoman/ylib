@@ -4391,7 +4391,7 @@ body {
   font-size: 20px;
   color: #3e4754;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
   border: 1px solid #ddd;
   padding: 30px 1rem;
@@ -4418,12 +4418,12 @@ body {
 /* line 4208, ../sass/layout.scss */
 .main .page-title form.newsletter .captcha {
   font-size: 15px;
-  padding: 0 20px;
   line-height: 40px;
   height: 40px;
   background: #ddd;
   margin-left: 5px;
   color: #65a74e;
+  flex: 0 0 100px;
 }
 /* line 4217, ../sass/layout.scss */
 .main .page-title form.newsletter input[type="text"] {
