@@ -473,7 +473,7 @@ var isEmail = function(email){
 }
 
 var validateNewsletter = function(){
-    console.log(grecaptcha.getResponse());
+    console.log("callback:"+grecaptcha.getResponse());
 
     if(!$('input[name="email"]').val()){
         //$('input[name="email"]').parent().addClass("wrong");
