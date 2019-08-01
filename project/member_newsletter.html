@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
@@ -41,7 +41,7 @@
     <script src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/web.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="js/captcha-mini.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 
@@ -188,10 +188,12 @@
                     <br /><br /><br /><br />
                     <form id="newsletter" class="newsletter" action="" method="post" onsubmit="return validateNewsletter()">
                         <input type="text" name="email" placeholder="輸入您的e-mail" />
-                        <div class="multicol">
+                        <div class="g-recaptcha" data-sitekey="6LcXubAUAAAAAGaqen9TlWWSegy4LjlxU8Ns1uQt"></div>
+                        <!--<div class="multicol">
                             <input type="text" name="captcha" placeholder="輸入驗證碼" />
-                            <div class="captcha" title="點我換驗證碼"><canvas width="100" height="40" id="captcha"></canvas></div>
-                        </div>
+                            <div class="captcha" title="點我換驗證碼"><canvas width="100" height="40" id="captcha">瀏覽器不支援請canvas</canvas></div>
+                        </div>-->
+                        <br />
                         <input type="submit" value="確定" />
                     </form>
                     <br />

@@ -383,15 +383,7 @@ $(document).ready(
                 },
             })
         }
-        if ($("#captcha").length > 0) {
-            //captcha
-            var captcha = new CaptchaMini();
-            captcha.draw(document.querySelector('#captcha'), r => {
-                //console.log(r, '验证码1');
-                captchaStr = r.toLowerCase();
-            });
-        }
-
+      
         //init
         bgImg();
         resizeScreen();
@@ -494,20 +486,5 @@ var validateNewsletter = function(){
         var notice="您的e-mail格式錯誤";
         alert(notice);
         return false;
-    }
-
-    if(!$('input[name="captcha"]').val()){
-        //$('input[name="email"]').parent().addClass("wrong");
-        var notice="請輸入驗證碼";
-        alert(notice);
-        return false;
-    }
-    if($('input[name="captcha"]').val().toLowerCase() != captchaStr){
-        //$('input[name="email"]').parent().addClass("wrong");
-        var notice="驗證碼錯誤";
-        alert(notice);
-        $("#captcha").click();
-        return false;
-
     }
 }
