@@ -122,6 +122,12 @@ $(document).ready(
             })
         }
 
+        if ($(".qna").length > 0) {
+            $(this).find(".ques").click(function( index ) {
+                $(this).siblings(".ans").slideToggle("fast").parent().toggleClass("active");
+            }).eq(0).click();
+        }
+
 
         //scroll
         $(window).scroll(function() {

@@ -79,6 +79,12 @@ body {
     }
 }
 
+.anchor{
+    position:relative;
+    top:-200px;
+    pointer-events: none;
+}
+
 .normal-content {
     h3, h2, h1, p {
         margin-bottom: 1em;
@@ -3377,6 +3383,8 @@ body {
             font-size: 15px;
             color: $text;
             line-height: 1.5;
+            
+            @include box;
 
             .head, .item {
                 display: flex;
@@ -3455,6 +3463,9 @@ body {
 
                     &.lg {
                         flex: 0 0 180px;
+                    }
+                    &.md {
+                        flex: 0 0 120px;
                     }
                     &.sm {
                         flex: 0 0 70px;
@@ -3606,6 +3617,7 @@ body {
             }
 
             @media screen and (max-width: $mobile) {
+                border:1px solid #ddd;
                 .head {
                     display: block;
 
@@ -4054,6 +4066,89 @@ body {
         }
     }
 
+    .postage{
+        
+        >div{
+            margin-bottom:50px;
+        }
+
+        .shortcuts{
+            @include box;
+            padding:5px 1rem;
+            background:$main;
+
+            li{
+                display:inline-block;
+                margin:5px;
+                a{
+                    color:#fff;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .table{
+            border:1px solid #ddd;
+            li{
+                display:flex;
+                align-items: stretch;
+                border-bottom:1px solid #ddd;
+                span{
+                    width:100%;
+                    padding:1rem;
+                    color:$text;
+                    display:block;
+                    @include box;
+                    
+
+                    &:first-child{
+                        background:$main;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+
+        .area{
+            li{
+                float:left;
+                width:50%;
+                margin:0;
+                @include box;
+
+                a{
+                    padding:5px 1rem;
+                    display:block;
+                    color:$text;
+                    font-size:16px;
+                    text-decoration: none;
+                    line-height: 1.5;
+                    min-height:24px;
+                    @include box;
+
+                    &:hover{
+                        color:$main;
+                        text-decoration: underline;
+                        
+                    }
+
+                }
+
+                @media screen and (max-width: $mobile) {
+                    float:none;
+                    width:100%;
+                }
+            }
+
+            &::after{
+                @include clear;
+            }
+        }
+    }
+
     .page-article{
         padding-bottom:100px;
 
@@ -4069,6 +4164,73 @@ body {
                 margin-right: 10px;
             }
         }
+
+        .qna{
+            border:1px solid #ddd;          
+            margin-bottom:1rem;
+            @include box;
+
+            &.active{
+                .ques{
+                    color:#fff;
+                    background:$main !important;
+                    
+
+                    &::before{
+                        color:#fff;
+                    }
+
+                    &::after {
+                        color:#fff;
+                        content: "\f056";
+                    }
+                }
+                .ans{
+                    //display:block;
+                }
+            }
+
+
+            .ques,.ans{
+                padding:1rem;
+                @include box;
+            }
+            .ques{
+                position:relative;
+                font-size: 17px;
+                line-height: 30px;
+                min-height:30px;
+                color:$text;
+                font-weight: 400;
+                cursor:pointer;
+                padding-right:2em;
+                @include box;
+
+                &::before{
+                    content:"Q：";
+                    color:$main;
+                }
+
+                &::after {
+                    content: "\f055";
+                    font-family: "fontawesome";
+                    color:$light;
+                    position:absolute;
+                    top:1rem;
+                    right:.5rem;
+                }
+
+                &:hover{
+                    background:$gray;
+                }
+            }
+
+            .ans{
+                display:none;
+                //background:$gray;
+            }
+        }
+
         hr{
             border:none;
             border-top:1px dashed #ddd;
@@ -4261,9 +4423,10 @@ body {
                 font-size: 25px;
                 line-height: 1em;
                 font-family: 'Montserrat';
-                font-weight: 100;
+                font-weight: bold;
                 vertical-align: middle;
                 margin:0 5px;
+                color:$second;
             }
         }
 
@@ -4272,8 +4435,8 @@ body {
                 &::before {
                     content: "";
                     display: inline-block;
-                    width: 22px;
-                    height: 17px;
+                    width: 25px;
+                    height: 20px;
                     background: url("../images/icon_filter.png") no-repeat center left;
                     background-size: auto 100%;
                 }
@@ -4285,9 +4448,22 @@ body {
                 &::before {
                     content: "";
                     display: inline-block;
-                    width: 22px;
-                    height: 17px;
+                    width: 25px;
+                    height: 20px;
                     background: url("../images/icon_calendar.png") no-repeat center left;
+                    background-size: auto 100%;
+                }
+            }
+        }
+
+        &.cart {
+            > span {
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 25px;
+                    height: 20px;
+                    background: url("../images/icon_buy.png") no-repeat center left;
                     background-size: auto 100%;
                 }
             }
@@ -4600,12 +4776,6 @@ body {
         @include box;
 
         margin-bottom: 50px;
-
-        .anchor{
-            position:relative;
-            top:-200px;
-            pointer-events: none;
-        }
 
         .trivia {
             width: 100%;
