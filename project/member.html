@@ -132,18 +132,17 @@
     </div>
     <!-- header end -->
     
-    <div class="main-content">
+    <div class="main-content bookintro">
         <!-- breadcrumbs start -->
         <ul class="breadcrumb">
             <li><a href="./">YLib 遠流博識網</a></li>
-            <li><a href="#">會員專區</a></li>
-            <li>訂閱 / 取消電子報</li>
+            <li>會員專區</li>
         </ul>
         <!-- breadcrumbs start -->
 
         <!-- 2 column wrapper start -->
         <div class="wrapper-with-aside">
-
+            <div class="banner-title">會員專區</div>
             <!-- aside start -->
             <div class="aside">
                 <div class="links">
@@ -182,68 +181,86 @@
 
             <!-- main-content start -->
             <div class="main">
-
-                <div class="page-title leading">
-                    <span>我要訂閱 / 取消電子報</span>
-                </div>
-
-                <div class="page-article">
-                    <form id="newsletter" class="type1" action="" method="post" onsubmit="return validateNewsletter()">
-                        <h5>Email：</h5>
-                        <input type="text" name="email" placeholder="輸入您的e-mail" />
-                        <div class="g-recaptcha" data-sitekey="6LcXubAUAAAAAGaqen9TlWWSegy4LjlxU8Ns1uQt"></div>
-                        <!--<div class="multicol">
-                            <input type="text" name="captcha" placeholder="輸入驗證碼" />
-                            <div class="captcha" title="點我換驗證碼"><canvas width="100" height="40" id="captcha">瀏覽器不支援請canvas</canvas></div>
-                        </div>-->
-                        <br />
-                        <input type="submit" value="確定" />
-                    </form>
-                    <br /><br /><br /><br />
-                    <ul>
-                        <li>遠流博識網最新、最優惠的折扣訊息，都在會員電子報中，歡迎加入會員，就可訂閱會員專屬優惠電子報！ </li>
-                        <li>未加入會員，亦可以mail訂閱內容型電子報。請於下方填入您的e-mail信箱，於下一頁選擇欲訂閱之電子報，系統將會寄送訂閱確認通知信至您的信箱，請開啟信件，並按下確定訂閱連結，即可完成訂閱程序，謝謝。 </li>
-                        <li>若您要取消或改變之前訂閱的電子報，無論您是否為會員，都請於下方輸入e-mail，即可於下個頁面取消或改變曾訂閱過的電子報。（特別說明：若您與他人均為會員，共用同mail，此mail取消訂閱的電子報，您與他人都不會再收到；若要分開訂閱或取消電子報，請登入會員，於會員專區進行訂閱或取消動作。）</li>
-                    </ul>
-                </div>
-
-                <div class="note-box alert">
-                    <h3>依據個人資料保護法，關於個人資料蒐集、處理及利用聲明</h3>
+                <div class="note-box">
+                    <p>親愛的 Shirley Chang 會員，您好：</p>
+                    <p>歡迎使用以下服務，若您有任何疑問及建議，或希望我們提供其他服務，請您利用<a href="mailto:ylib@ylib.com">客服信箱</a>告訴我們！感謝您的支持與愛護。</p>
                     <br />
-                    <p>使用本電子報訂閱頁面視為瞭解及同意遠流出版事業股份有限公司於本電子報訂閱頁面須進行您個人資料（email資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料揭露於第三人或使用於電子報訂閱以外之其它用途。</p>
+                    <p><span>※ 您已登入博識網，離開前請記得登出</span></p>
                 </div>
 
-                <!-- 表單 start -->
-                <div class="order-list">
-                    <div class="table">
-                        <!-- 表單標題 start -->
-                        <div class="head">
-                            <div class="lg">內容電子報簡介</div>
-                            <div class="lg">發行日期</div>
-                            <div class="flex">內容介紹</div>
+                <div class="note-box" style="border:none">
+                    <div class="section-title spec">
+                        <span>交易紀錄</span>
+                    </div>
+                    <div class="group col2">
+                        <div>
+                            <a href="#">查詢訂單</a>
                         </div>
-                        <!-- 表單標題 end -->
-
-                        <div class="item">
-                            <div class="lg"><h3>名稱</h3>Best100 名家推薦報</div>
-                            <div class="lg"><h3>發行日期</h3>不定期發行</div>
-                            <div class="flex"><h3>內容簡介</h3>秉持【優質精選、名家推薦】理念，網羅各大出版社首選好書。明確主題，延伸您閱讀觸角；透過作家速寫、人與書對話，使您更親近books的表情與神髓。 </div>
+                        <div>
+                            <a href="#">查詢發票</a>
                         </div>
-                        <div class="item">
-                            <div class="lg"><h3>名稱</h3>科學少年親子報（html版）</div>
-                            <div class="lg"><h3>發行日期</h3>每月第二、四週發行</div>
-                            <div class="flex"><h3>內容簡介</h3>每期精選雜誌內容，還包含了雜誌內沒有的優惠好康、活動消息。每月第二、四週的週二發行，推薦適合親子共讀的篇章，有趣又好玩的科學消息，就在科學少年親子報。</div>
+                        <div>
+                            <a href="#">查詢科學人雜誌訂閱記錄</a>
                         </div>
-                        <div class="item">
-                            <div class="lg"><h3>名稱</h3>科學人知識報（html版）</div>
-                            <div class="lg"><h3>發行日期</h3>週刊．每週五發行</div>
-                            <div class="flex"><h3>內容簡介</h3>掌握最新科學研究趨勢，有不同於雜誌的最新科學新聞、精采文章導覽、科學小字典、講座摘要、科學書摘和最新訊息，跟大家分享科學的奧妙與趣味！</div>
+                        <div>
+                            <a href="#">查詢科學少年雜誌訂閱記錄</a>
                         </div>
                     </div>
-           
+                    <br /><br /><br />
+                    <div class="section-title author">
+                        <span>個人資料</span>
+                    </div>
+                    <div class="group col2">
+                        <div>
+                            <a href="#">修改個人資料</a>
+                        </div>
+                        <div>
+                            <a href="#">修改密碼</a>
+                        </div>
+                        <div>
+                            <a href="#">會員載具歸戶</a>
+                        </div>
+                        <div>
+                            <a href="#">常用發票載具設定</a>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="section-title catalog">
+                        <span>帳戶管理</span>
+                    </div>
+                    <div class="group col2">
+                        <div>
+                            <a href="#">查詢會員資格</a>
+                        </div>
+                        <div>
+                            <a href="#">查詢折價券</a>
+                        </div>
+                        <div>
+                            <a href="#">查詢書香存摺</a>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="section-title recommand">
+                        <span>訂閱電子報</span>
+                    </div>
+                    <div class="group col2">
+                        <div>
+                            <a href="#">訂閱／取消電子報</a>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="section-title author">
+                        <span>其他會員專區</span>
+                    </div>
+                    <div class="group col2">
+                        <div>
+                            <a href="https://www.ylib.com/bookclub/YLIBClub/YLIBClub.asp" target="_blank">「遠流俱樂部」會員專區</a>
+                        </div>
+                        <div>
+                            <a href="https://www.ylib.com/mdmdss/member.asp" target="_blank">「漫點學」會員專區</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- 表單 end -->
-
                 
             </div>
             <!-- main-content end -->

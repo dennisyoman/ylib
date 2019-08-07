@@ -1,0 +1,824 @@
+<!DOCTYPE>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keyword" lang="en" content="" />
+    <meta name="keywords" lang="en" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!-- 修正iPhone旋轉放大 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- fullscreen webapp -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- facebook/orkut -->
+    <meta property="og:title" content="YLib 遠流博識網 - 遠流網路書店" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/thumb.jpg" />
+    <meta property="og:description" content="" />
+    <meta name="description" content="" />
+    <link rel="image_src" type="image/jpeg" href="images/thumb.jpg" />
+    <title>YLib 遠流博識網 - 遠流網路書店</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" rev="stylesheet" media="screen" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <!-- javascript -->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.wow.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+</head>
+
+<body>
+    <!-- header start -->
+    <div id="header" class="header">
+                                                     
+        <div class="fixed-nav">
+            <div class="maxw">
+                <div id="mmb" class="menu"></div>
+                <div class="logo"><a href="./"></a></div>
+                <!--已登入 -->
+                <div class="member is-login">
+                    <a><span>S</span>Shirley Chang</a>
+                    <ul>
+                        <li><a href="#"><img src="images/icon_user.png"/>會員專區</a></li>
+                        <li><a href="#"><img src="images/icon_news.png"/>訂閱電子報</a></li>
+                        <li><a href="#"><img src="images/icon_logout.png"/>登出</a></li>
+                    </ul>
+                </div>
+                <!--未登入-->
+                <!--<div class="member">
+                    <a href="#"><img src="images/icon_user_g.png"/>會員登入</a><a href="#">加入會員</a>
+                </div>-->
+                <div class="cart">
+                    <a href="#"><span>3</span></a>
+                </div>
+                <div id="msb" class="msb">
+                    
+                </div>
+            </div>
+        </div>                                                                             
+        <div class="main-nav">
+            <div class="maxw">
+                <ul class="links">
+                    <li>
+                        <a href="#">書籍類型</a>
+                        <ul>
+                            <li class="home"><a href="#">書籍首頁</a></li>
+                            <li><a href="#">熱門新書</a></li>
+                            <li><a href="#">暢銷排行</a></li>
+                            <li class="filter">
+                                <a href="#">書籍分類</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">金庸作品</a>
+                                        <ul>
+                                            <li><a href="#">金庸作品集</a></li>
+                                            <li><a href="#">金庸漫畫</a></li>
+                                            <li><a href="#">金庸茶館</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">文學．小說</a>
+                                        <ul>
+                                            <li><a href="#">文學</a></li>
+                                            <li><a href="#">小說</a></li>
+                                            <li><a href="#">推理</a></li>
+                                            <li><a href="#">青少年書</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">企管．資訊</a>
+                                        <ul>
+                                            <li><a href="#">商業理財</a></li>
+                                            <li><a href="#">資訊</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">人文．科普</a>
+                                        <ul>
+                                            <li><a href="#">自然</a></li>
+                                            <li><a href="#">科普</a></li>
+                                            <li><a href="#">歷史地理</a></li>
+                                            <li><a href="#">台灣主題</a></li>
+                                            <li><a href="#">社會科學</a></li>
+                                            <li><a href="#">哲學思想</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">生活．藝術</a>
+                                        <ul>
+                                            <li><a href="#">旅遊</a></li>
+                                            <li><a href="#">時尚</a></li>
+                                            <li><a href="#">生活風格</a></li>
+                                            <li><a href="#">藝術設計</a></li>
+                                            <li><a href="#">電影</a></li>
+                                            <li><a href="#">漫畫</a></li>
+                                            <li><a href="#">文創商品</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">心理．健康</a>
+                                        <ul>
+                                            <li><a href="#">心理</a></li>
+                                            <li><a href="#">勵志</a></li>
+                                            <li><a href="#">心靈</a></li>
+                                            <li><a href="#">醫療保健</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">親子．童書</a>
+                                        <ul>
+                                            <li><a href="#">童書</a></li>
+                                            <li><a href="#">繪本</a></li>
+                                            <li><a href="#">親子教養</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">教育．學術</a>
+                                        <ul>
+                                            <li><a href="#">教育</a></li>
+                                            <li><a href="#">學術</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">學習．辭書</a>
+                                        <ul>
+                                            <li><a href="#">辭書</a></li>
+                                            <li><a href="#">語言</a></li>
+                                            <li><a href="#">傳播</a></li>
+                                            <li><a href="#">有聲書</a></li>
+                                            <li><a href="#">CD-ROM</a></li>
+                                            <li><a href="#">考試學習</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="download"><a href="#">圖書目錄下載</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">嚴選套書</a></li>
+                    <li><a href="#">主題活動</a></li>
+                    <li><a href="#">親子童書</a></li>
+                    <li><a href="#">得獎推薦</a></li>
+                    <li><a href="#">讀享生活</a></li>
+                    <li><a href="#">非常作家</a></li>
+                    <li><a href="#">數位影音</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-nav">
+            <div class="maxw">
+                <div class="search">
+                    <form>
+                        <select>
+                            <option value="0">全部</option>
+                            <option value="1">書名</option>
+                            <option value="2">作者</option>
+                            <option value="3">ISBN</option>
+                        </select><input type="text" placeholder="搜尋..."/>
+                        <input type="submit" value="" />
+                    </form>
+                </div>
+                <ul class="links">
+                    <li><a href="#">故事課</a></li>
+                    <li><a href="#">沉思錄</a></li>
+                    <li><a href="#">混血營</a></li>
+                    <li><a href="#">漢字樹</a></li>
+                    <li><a href="#">金庸</a></li>
+                    <li><a href="#">唐德剛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-nav">
+            <div class="maxw">
+                <ul class="links">
+                    <li><a href="#">遠流出版公司</a></li>
+                    <li><a href="#">遠流博識網</a></li>
+                    <li><a href="#">Best100</a></li>
+                    <li><a href="#">遠流俱樂部</a></li>
+                    <li><a href="#">科學人</a></li>
+                    <li><a href="#">科學少年</a></li>
+                    <li><a href="#">漫點學</a></li>
+                    <li><a href="#">智慧藏</a></li>
+                    <li><a href="#">華山文創</a></li>
+                    <li><a href="#">台灣雲端書庫</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    
+    <div class="main-content">
+        <!-- breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="./">YLib 遠流博識網</a></li>
+            <li>全館搜尋</li>
+        </ul>
+        <!-- breadcrumbs start -->
+
+        <!-- 2 column wrapper start -->
+        <div class="wrapper-with-aside">
+
+            <!-- aside start -->
+            <div class="aside">
+                <div class="catalog">
+                    <h3>類別推薦</h3>
+                    <div class="close">類別推薦</div>
+                    <ul>
+                        <li>
+                            <a href="#">金庸作品</a>
+                            <ul>
+                                <li><a href="#">金庸作品集</a></li>
+                                <li><a href="#">金庸漫畫</a></li>
+                                <li><a href="#">金庸茶館</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">文學．小說</a>
+                            <ul>
+                                <li><a href="#">文學</a></li>
+                                <li><a href="#">小說</a></li>
+                                <li><a href="#">推理</a></li>
+                                <li><a href="#">青少年書</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">企管．資訊</a>
+                            <ul>
+                                <li><a href="#">商業理財</a></li>
+                                <li><a href="#">資訊</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">人文．科普</a>
+                            <ul>
+                                <li><a href="#">自然</a></li>
+                                <li><a href="#">科普</a></li>
+                                <li><a href="#">歷史地理</a></li>
+                                <li><a href="#">台灣主題</a></li>
+                                <li><a href="#">社會科學</a></li>
+                                <li><a href="#">哲學思想</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">生活．藝術</a>
+                            <ul>
+                                <li><a href="#">旅遊</a></li>
+                                <li><a href="#">時尚</a></li>
+                                <li><a href="#">生活風格</a></li>
+                                <li><a href="#">藝術設計</a></li>
+                                <li><a href="#">電影</a></li>
+                                <li><a href="#">漫畫</a></li>
+                                <li><a href="#">文創商品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">心理．健康</a>
+                            <ul>
+                                <li><a href="#">心理</a></li>
+                                <li><a href="#">勵志</a></li>
+                                <li><a href="#">心靈</a></li>
+                                <li><a href="#">醫療保健</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">親子．童書</a>
+                            <ul>
+                                <li><a href="#">童書</a></li>
+                                <li><a href="#">繪本</a></li>
+                                <li><a href="#">親子教養</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">教育．學術</a>
+                            <ul>
+                                <li><a href="#">教育</a></li>
+                                <li><a href="#">學術</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">學習．辭書</a>
+                            <ul>
+                                <li><a href="#">辭書</a></li>
+                                <li><a href="#">語言</a></li>
+                                <li><a href="#">傳播</a></li>
+                                <li><a href="#">有聲書</a></li>
+                                <li><a href="#">CD-ROM</a></li>
+                                <li><a href="#">考試學習</a></li>
+                            </ul>
+                        </li>
+                        <li class="download"><a href="#">圖書目錄下載</a></li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <h3>出書日期檢索</h3>
+                    <div class="close">出書日期檢索</div>
+                    <form id="form_period" action="" method="post" onsubmit="return validatePeriod()">
+                        <label for="period_start">起始日期</label>
+                        <input class="datepicker" type="text" name="period_start" id="period_start" placeholder="" />
+                        <label for="period_end">結束日期</label>
+                        <input class="datepicker" type="text" name="period_end" id="period_end" placeholder="" />
+                        <input type="submit" value="搜尋" />
+                    </form>
+                </div>
+            </div>
+            <!-- aside end -->
+
+            <!-- main-content start -->
+            <div class="main">
+
+                <div class="note-box">
+                    <p>
+                        關鍵字：<span>哆啦A夢</span>，共有<span>1536</span>筆
+                    </p>
+                </div>
+
+                <div class="note-box" style="border:0;padding:1rem 0;">
+                    <div class="section-title filter">
+                        <span>搜尋結果</span>
+                        <span class="view-filter">顯示 
+                            <span class="list" href="#" title="圖文模式"></span>
+                            <span class="grid" href="#" title="圖片模式"></span>
+                        </span>
+                    </div>
+                    <div class="group" style="text-align: right">
+                        <div>
+                            排序依照
+                            <select>
+                                <option value="1">精確度</option>
+                                <option value="2">價格</option>
+                                <option value="3">日期</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+             
+                
+                
+                <!-- 搜尋結果 start -->
+                <div class="search-books4 view-target">
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb3d">
+                                <span>
+                                    <img src="images/large_cover.jpg"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb">
+                                <span>
+                                    <img src="images/book2.png"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb3d">
+                                <span>
+                                    <img src="images/large_cover.jpg"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb">
+                                <span>
+                                    <img src="images/book2.png"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb3d">
+                                <span>
+                                    <img src="images/large_cover.jpg"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb">
+                                <span>
+                                    <img src="images/book2.png"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb3d">
+                                <span>
+                                    <img src="images/large_cover.jpg"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-book">
+                        
+                        <div>
+                            <span class="thumb">
+                                <span>
+                                    <img src="images/book2.png"/>
+                                    <a class="cart" href="#" title="加入購物車"></a>
+                                    <a class="discover" href="#" title="詳細資訊"></a>
+                                </span>
+                                
+                            </span>
+                            <h3>溫和且堅定的正向教養2—姚以婷審定推薦：愛太多的父母</h3>
+                            <span class="author">簡．尼爾森博士、雪柔．埃爾溫</span>
+                            <span class="price">
+                                <span class="dis">79折</span>
+                                <span>300</span>
+                            </span>
+                            <div class="fulldetail">
+                                <p>
+                                    <span>定價：</span>
+                                    2400元
+                                </p>
+                                <p>
+                                    <span>紅利價：</span>
+                                    100 點+ 1700元
+                                </p>
+                                <p>
+                                    <span>遠流俱樂部選書額度：</span>
+                                    8
+                                </p>
+                                <p>
+                                    <span>類型：</span>
+                                    <a href="#">文學‧小說;親子‧童書</a>
+                                </p>
+                                <p>
+                                    <span>出版社：</span>
+                                    <a href="#">遠流出版</a>
+                                </p>
+                                <p>
+                                    <span>出版日：</span>
+                                    2016/06/01
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+                <!-- 搜尋結果 end -->
+
+                <div class="pager">
+                    <ul>
+                        <li><a href="#" title="到前一頁">«</a></li>
+                        <li class="selected"><a href="#" title="到第1頁">1</a></li>
+                        <li><a href="#" title="到第2頁">2</a></li>
+                        <li><a href="#" title="到第3頁">3</a></li>
+                        <li><a href="#" title="到第3頁">...</a></li>
+                        <li><a href="#" title="到下一頁">»</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- main-content end -->
+        </div>
+        <!-- 2 column wrapper end -->
+    </div>
+    
+    
+
+    <!-- footer start -->
+    <div class="footer">
+        <div class="maxw">
+            <div class="sitemap">
+                <ul>
+                    <h3>關於遠流</h3>
+                    <li><a href="#">關於遠流</a></li>
+                    <li><a href="#">創辦人介紹</a></li>
+                    <li><a href="#">關於博識網</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">團購服務</a></li>
+                </ul>
+                <ul>
+                    <h3>會員服務</h3>
+                    <li><a href="#">會員權益</a></li>
+                    <li><a href="#">服務條款</a></li>
+                    <li><a href="#">訂閱／取消電子報</a></li>
+                    <li><a href="#">下載專區</a></li>
+                </ul>
+                <ul>
+                    <h3>客服中心</h3>
+                    <li><a href="#">查詢帳號密碼</a></li>
+                    <li><a href="#">購物流程說明</a></li>
+                    <li><a href="#">常見問答</a></li>
+                    <li><a href="#">客服專線</a></li>
+                </ul>
+                <ul>
+                    <h3>追蹤我們</h3>
+                    <li>
+                        <a href="#">遠流粉絲團</a> / 
+                        <a href="#">閱讀再進化</a> / 
+                        <a href="#">科學人</a>
+                        <a href="#">Best100閱讀精品店</a> / 
+                        <a href="#">科學少年</a>
+                        <a href="#">漫點學</a> / 
+                        <a href="#">台灣雲端書庫</a>
+                    </li>
+                    <li><a href="#">遠流 LINE</a></li>
+                    <li><a href="#">遠流 Instagram</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <a class="footer-logo" href="./"><img src="images/logo_ylib.png"/></a>
+                <br />
+                <a href="#"><img src="images/icon_address.png"/> 台北市中正區南昌路2段81號6樓</a>
+                <br />
+                <a href="#"><img src="images/icon_phone.png"/> 電話：(02)2392-6899</a>
+                <a href="#"><img src="images/icon_phone.png"/> 免付費專線：0800-231663</a>
+                <br />
+                <a href="#"><img src="images/icon_fax.png"/> 傳真：(02)2392-6658</a>
+                <a href="#"><img src="images/icon_mail.png"/> 服務信箱：ylib@ylib.com</a>
+            </div>
+        </div>
+        <div class="copyright">Copyright © 2019 Yuan-Liou Publishing Co.,Ltd.All Rights Reserved. YLib is trademark of Yuan-Liou Publishing Co.,Ltd.</div>
+        <div id="gotop" class="gotop"></div>
+    </div>
+    
+    <!-- footer end -->
+    
+</body>
+</html>

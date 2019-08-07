@@ -29,6 +29,14 @@ $(document).ready(
             }).eq(0).click();
         }
 
+        if ($(".view-filter").length >= 1) {
+            $(".view-filter").find(">span").click(function( index ) {
+                $(".view-target").removeClass("list grid").addClass($(this).attr('class'));
+                $(this).addClass("selected").siblings(".selected").removeClass("selected");
+                //js換內容
+            }).eq(0).click();
+        }
+
         //quantity
         if ($(".quantity").length >= 1) {
             $(".quantity").find("span.decrease").click(function( index ) {
@@ -471,7 +479,7 @@ window.onload = function(){
 
 
 //validations
-var captchaStr="";
+
 var isEmail = function(email){
     if (email=="") return true;
     reEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
@@ -480,18 +488,228 @@ var isEmail = function(email){
 
 var validateNewsletter = function(){
     console.log("callback:"+grecaptcha.getResponse());
+    $('input').removeClass("wrong");
 
     if(!$('input[name="email"]').val()){
-        //$('input[name="email"]').parent().addClass("wrong");
-        var notice="請輸入您的e-mail";
+        $('input[name="email"]').addClass("wrong");
+        var notice="請輸入您的Email";
         alert(notice);
         return false;
 
     }
 
     if(!isEmail($('input[name="email"]').val())){
-        var notice="您的e-mail格式錯誤";
+        $('input[name="email"]').addClass("wrong");
+        var notice="您的Email格式錯誤";
         alert(notice);
         return false;
+    }
+}
+
+var validateLogin = function(){
+    console.log("callback:"+grecaptcha.getResponse());
+    $('input').removeClass("wrong");
+
+    if(!$('input[name="userid"]').val()){
+        $('input[name="userid"]').addClass("wrong");
+        var notice="請輸入您的帳號";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="password"]').val()){
+        $('input[name="password"]').addClass("wrong");
+        var notice="請輸入密碼";
+        alert(notice);
+        return false;
+
+    }
+}
+
+var validateLogin = function(){
+    console.log("callback:"+grecaptcha.getResponse());
+    $('input').removeClass("wrong");
+
+    if(!$('input[name="userid"]').val()){
+        $('input[name="userid"]').addClass("wrong");
+        var notice="請輸入您的帳號";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="password"]').val()){
+        $('input[name="password"]').addClass("wrong");
+        var notice="請輸入密碼";
+        alert(notice);
+        return false;
+
+    }
+}
+
+var validateForget = function(){
+    console.log("callback:"+grecaptcha.getResponse());
+    $('input').removeClass("wrong");
+
+    if(!$('input[name="name"]').val()){
+        $('input[name="name"]').addClass("wrong");
+        var notice="請輸入您的姓名";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="email"]').val()){
+        $('input[name="email"]').addClass("wrong");
+        var notice="請輸入您的Email";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!isEmail($('input[name="email"]').val())){
+        $('input[name="email"]').addClass("wrong");
+        var notice="您的Email格式錯誤";
+        alert(notice);
+        return false;
+    }
+}
+
+var validateProfile = function(){
+    $('input').removeClass("wrong");
+    $('select').removeClass("wrong");
+    
+
+    if(!$('input[name="userid"]').val()){
+        $('input[name="userid"]').addClass("wrong");
+        var notice="請輸入您的帳號";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="password"]').val()){
+        $('input[name="password"]').addClass("wrong");
+        var notice="請輸入密碼";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="confirmPW"]').val() || $('input[name="password"]').val() != $('input[name="confirmPW"]').val()){
+        $('input[name="confirmPW"]').addClass("wrong");
+        var notice="密碼確認錯誤";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="name"]').val()){
+        $('input[name="name"]').addClass("wrong");
+        var notice="請輸入您的姓名";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!$('input[name="email"]').val()){
+        $('input[name="email"]').addClass("wrong");
+        var notice="請輸入您的Email";
+        alert(notice);
+        return false;
+
+    }
+
+    if(!isEmail($('input[name="email"]').val())){
+        $('input[name="email"]').addClass("wrong");
+        var notice="您的Email格式錯誤";
+        alert(notice);
+        return false;
+    }
+
+
+
+    if(!$('input[name="gender"]:checked').val()){
+        $('input[name="gender"]').addClass("wrong");
+        var notice="請輸入您的性別";
+        alert(notice);
+        return false;
+
+    }
+
+    if($("#byear").length>0){
+        var byearVal = $("#byear > option:selected").val();
+        if(byearVal==0){
+            $('#byear').addClass("wrong");
+            var notice="請選擇出生年份";
+            alert(notice);
+            return false;
+        }
+    }
+    if($("#bmonth").length>0){
+        var bmonthVal = $("#bmonth > option:selected").val();
+        if(bmonthVal==0){
+            $('#bmonth').addClass("wrong");
+            var notice="請選擇出生月份";
+            alert(notice);
+            return false;
+        }
+    }
+    if($("#bday").length>0){
+        var bdayVal = $("#bday > option:selected").val();
+        if(bdayVal==0){
+            $('#bday').addClass("wrong");
+            var notice="請選擇出生日";
+            alert(notice);
+            return false;
+        }
+    }
+
+
+    if(!$('input[name="mobile"]').val()){
+        $('input[name="mobile"]').addClass("wrong");
+        var notice="請輸入您的行動電話";
+        alert(notice);
+        return false;
+
+    }
+    if($("#country").length>0){
+        var countryVal = $("#country > option:selected").val();
+        if(countryVal==0){
+            $('#country').addClass("wrong");
+            var notice="請選擇國家(地區)別";
+            alert(notice);
+            return false;
+        }
+    }
+    if($("#postal").length>0){
+        var postalVal = $("#postal > option:selected").val();
+        if(postalVal==0){
+            $('#postal').addClass("wrong");
+            var notice="請選擇郵遞區號";
+            alert(notice);
+            return false;
+        }
+    }
+    
+
+    if(!$('input[name="address"]').val()){
+        $('input[name="address"]').addClass("wrong");
+        var notice="請輸入完整地址";
+        alert(notice);
+        return false;
+
+    }
+
+    if($("input[name='agreement']").length>0){
+        var agreement=$("input[name='agreement']:checked").length;
+        if(agreement == 0){
+            $('input[name="agreement"]').addClass("wrong");
+            var notice="請勾選已詳細閱讀並同意會員服務條款與隱私權政策";
+            alert(notice);
+            return false;
+
+        }
     }
 }
