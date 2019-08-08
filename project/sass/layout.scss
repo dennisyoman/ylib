@@ -50,7 +50,7 @@ body {
         position: absolute;
         z-index: 5;
         font-size: 13px;
-        color: $light;
+        color: $main;
         text-align: center;
         line-height: 15px;
         padding-top: 35px;
@@ -272,7 +272,7 @@ body {
 
             span {
                 display: inline-block;
-                background: $light;
+                background: $main;
                 width: 26px;
                 height: 26px;
                 text-align: center;
@@ -363,7 +363,7 @@ body {
 
                     span {
                         display: inline-block;
-                        background: $light;
+                        background: $main;
                         width: 26px;
                         height: 26px;
                         text-align: center;
@@ -383,7 +383,7 @@ body {
                         font-family: "fontawesome";
                         margin: 0 .5em 0 1em;
                         float: right;
-                        color: $light;
+                        color: $main;
                     }
                 }
             }
@@ -433,7 +433,7 @@ body {
                         }
 
                         &:hover {
-                            background: $light;
+                            background: $main;
 
                             @include opacity(1);
                         }
@@ -615,7 +615,7 @@ body {
                 }
 
                 &:hover {
-                    border-bottom: 3px solid $light;
+                    border-bottom: 3px solid $main;
                 }
 
                 > ul {
@@ -641,7 +641,7 @@ body {
                             @include border-radius(15px);
 
                             &:hover {
-                                background: $light;
+                                background: $main;
                                 color: #fff;
                             }
                         }
@@ -680,7 +680,7 @@ body {
                                     border-bottom: 1px dashed #ddd;
 
                                     &:hover {
-                                        color: $light;
+                                        color: $main;
                                     }
                                 }
 
@@ -715,7 +715,7 @@ body {
 
                                             &:hover {
                                                 color: #fff;
-                                                background: $light;
+                                                background: $main;
                                             }
                                         }
                                     }
@@ -753,7 +753,7 @@ body {
                     }
 
                     &:hover {
-                        border-bottom: 0px solid $light;
+                        border-bottom: 0px solid $main;
                     }
 
                     &.active {
@@ -903,7 +903,7 @@ body {
                 font-size: 14px;
                 color: #fff;
                 padding-left: 1em;
-                background-color: $light;
+                background-color: $main;
                 height: 30px;
                 flex: 0 0 auto;
 
@@ -1032,7 +1032,7 @@ body {
                     @include border-radius(15px);
                     @include box;
 
-                    //background: $light;
+                    //background: $main;
 
                     a {
                         line-height: 30px;
@@ -1098,7 +1098,7 @@ body {
         }
 
         .swiper-pagination-bullet-active {
-            background: $light;
+            background: $main;
         }
 
         .swiper-button-next, .swiper-button-prev {
@@ -1175,7 +1175,7 @@ body {
                 font-size: 20px;
                 max-height: 1.2em;
                 -webkit-line-clamp: 1;
-                border-left: 4px solid $light;
+                border-left: 4px solid $main;
                 padding-left: .5rem;
             }
         }
@@ -1590,7 +1590,7 @@ body {
             &::before {
                 content: "\f2c0";
                 font-family: "fontawesome";
-                color: $light;
+                color: $main;
                 margin-right: 5px;
             }
         }
@@ -1604,7 +1604,7 @@ body {
             color: $red;
 
             span {
-                color: $second;
+                //color: $second;
                 position: relative;
                 font-size: 40px;
                 font-family: 'Montserrat';
@@ -1616,7 +1616,7 @@ body {
                     line-height: 18px;
                     height: 18px;
                     padding: 0 6px;
-                    border: 1px solid $light;
+                    border: 1px solid $main;
                     width: auto;
                     display: inline-block;
                     margin: 0 5px;
@@ -2211,7 +2211,7 @@ body {
             &::before {
                 content: "\f2c0";
                 font-family: "fontawesome";
-                color: $light;
+                color: $main;
                 margin-right: 5px;
             }
         }
@@ -2225,7 +2225,7 @@ body {
             color: $red;
 
             span {
-                color: $second;
+                //color: $second;
                 position: relative;
                 font-size: 40px;
                 font-family: 'Montserrat';
@@ -2237,7 +2237,7 @@ body {
                     line-height: 18px;
                     height: 18px;
                     padding: 0 6px;
-                    border: 1px solid $light;
+                    border: 1px solid $main;
                     width: auto;
                     display: inline-block;
                     margin: 0 5px;
@@ -2701,7 +2701,7 @@ body {
                     &::before {
                         content: "\f2c0";
                         font-family: "fontawesome";
-                        color: $light;
+                        color: $main;
                         margin-right: 5px;
                     }
                 }
@@ -2715,7 +2715,7 @@ body {
                     color: $red;
 
                     span {
-                        color: $second;
+                        //color: $second;
                         position: relative;
                         font-size: 40px;
                         font-family: 'Montserrat';
@@ -2727,7 +2727,7 @@ body {
                             line-height: 18px;
                             height: 18px;
                             padding: 0 6px;
-                            border: 1px solid $light;
+                            border: 1px solid $main;
                             width: auto;
                             display: inline-block;
                             margin: 0 5px;
@@ -2757,7 +2757,7 @@ body {
         }
 
         .swiper-pagination-bullet-active {
-            background: $light;
+            background: $main;
         }
 
         .swiper-button-next, .swiper-button-prev {
@@ -2817,7 +2817,7 @@ body {
     li {
         display: inline-block;
         font-size: 12px;
-        color: $light;
+        color: $main;
         line-height: 12px;
     }
 
@@ -2925,16 +2925,16 @@ body {
 
             &.active {
                 span:first-child {
-                    background: $light;
+                    background: $main;
                     color: #fff;
-                    border-color: $light;
+                    border-color: $main;
                     animation-name: popIn;
                     animation-duration: .6s;
                     animation-fill-mode: both;
                 }
 
                 &::after {
-                    border-color: $light;
+                    border-color: $main;
                 }
 
                 span:last-child {
@@ -2945,13 +2945,13 @@ body {
 
             &.done {
                 span:first-child {
-                    //background:$light;
-                    color: $light;
-                    border-color: $light;
+                    //background:$main;
+                    color: $main;
+                    border-color: $main;
                 }
 
                 &::after {
-                    border-top: 1px solid $light;
+                    border-top: 1px solid $main;
                 }
             }
         }
@@ -3288,7 +3288,7 @@ body {
                     max-width: 100%;
 
                     &:focus {
-                        border-color: $light;
+                        border-color: $main;
                     }
                 }
 
@@ -3340,7 +3340,7 @@ body {
             text-align: right;
 
             input[type="submit"] {
-                background: $light;
+                background: $main;
                 color: #fff;
                 text-align: center;
                 font-size: 15px;
@@ -3363,8 +3363,8 @@ body {
 
                     a {
                         padding: 0 80px;
-                        border-color: $light;
-                        background: $light;
+                        border-color: $main;
+                        background: $main;
                         color: #fff;
 
                         &:hover {
@@ -3387,8 +3387,8 @@ body {
                     @include transition(all, 0.3s);
 
                     &:hover {
-                        border-color: $light;
-                        color: $light;
+                        border-color: $main;
+                        color: $main;
                     }
                 }
 
@@ -3415,7 +3415,7 @@ body {
         }
 
         a {
-            color: $light;
+            color: $main;
         }
     }
 
@@ -3426,7 +3426,7 @@ body {
 
         margin-bottom: 20px;
         background: #fff;
-        border: 1px solid $light;
+        border: 1px solid $main;
 
         .group-filter {
             text-align: left;
@@ -3465,7 +3465,7 @@ body {
                 margin-bottom: .7em;
 
                 span {
-                    color: $light;
+                    color: $main;
 
                     font-weight:700;
                
@@ -3490,8 +3490,8 @@ body {
 
                         a {
                             padding: 0 80px;
-                            border-color: $light;
-                            background: $light;
+                            border-color: $main;
+                            background: $main;
                             color: #fff;
 
                             &:hover {
@@ -3514,8 +3514,8 @@ body {
                         @include transition(all, 0.3s);
 
                         &:hover {
-                            border-color: $light;
-                            color: $light;
+                            border-color: $main;
+                            color: $main;
                         }
                     }
 
@@ -3615,7 +3615,7 @@ body {
                     }
 
                     span {
-                        color: $light;
+                        color: $main;
                         font-size: 13px;
                     }
                 }
@@ -3706,7 +3706,7 @@ body {
                     }
 
                     span {
-                        color: $light;
+                        color: $main;
                         font-size: 13px;
                     }
                 }
@@ -3849,7 +3849,7 @@ body {
                     }
 
                     span {
-                        color: $light;
+                        color: $main;
 
                         font-weight:700;
                    
@@ -3859,7 +3859,7 @@ body {
                         display: block;
                         text-decoration: none;
 
-                        //background:$light;
+                        //background:$main;
                         color: $main;
                         font-size: 13px;
                         line-height: 23px;
@@ -3877,10 +3877,10 @@ body {
                     }
 
                     a.save{
-                        //background: $light;
+                        //background: $main;
                         //color: #fff;
                         &:hover {
-                            background: $light;
+                            background: $main;
                             color: #fff;
                         }
                     }
@@ -3928,7 +3928,7 @@ body {
                         }
 
                         span {
-                            color: $light;
+                            color: $main;
                             display: block;
                             font-size: 12px;
                             margin: 5px 0;
@@ -3958,7 +3958,7 @@ body {
                 > div {
                     &:nth-child(1) {
                         &::before {
-                            color: $light;
+                            color: $main;
                             content: "\f07a";
                             font-family: "fontawesome";
                             margin-right: 5px;
@@ -4171,7 +4171,7 @@ body {
                     }
 
                     span {
-                        color: $light;
+                        color: $main;
 
                         font-weight:700;
                    
@@ -4195,7 +4195,7 @@ body {
                         display: block;
                         text-decoration: none;
 
-                        //background:$light;
+                        //background:$main;
                         color: $main;
                         font-size: 13px;
                         line-height: 23px;
@@ -4206,10 +4206,10 @@ body {
                     }
 
                     a.func{
-                        //background: $light;
+                        //background: $main;
                         //color: #fff;
                         &:hover {
-                            background: $light;
+                            background: $main;
                             color: #fff;
                         }
                     }
@@ -4239,7 +4239,7 @@ body {
                         }
 
                         span {
-                            color: $light;
+                            color: $main;
                             display: block;
                             font-size: 12px;
                             margin: 5px 0;
@@ -4366,7 +4366,7 @@ body {
             }
 
             input[type="submit"] {
-                background: $light;
+                background: $main;
                 color: #fff;
                 text-align: center;
                 font-size: 15px;
@@ -4543,18 +4543,19 @@ body {
                     margin-right: 5px;
 
                     &.hl {
-                        color: $light;
+                        color: $main;
                     }
 
                     &.discount {
                         font-size: 13px;
                         color: #fff;
-                        background: $light;
+                        background: $main;
                         padding: 2px 8px;
                     }
 
                     &.price {
-                        color: $second;
+                        //color: $second;
+                        color:$red;
                         font-size: 30px;
                         line-height: 1em;
                         font-family: 'Montserrat';
@@ -4568,7 +4569,7 @@ body {
                     &.keys {
                         a {
                             white-space: nowrap;
-                            border: 1px solid $light;
+                            border: 1px solid $main;
                             padding: 1px 8px;
 
                             @include border-radius(10px);
@@ -4578,7 +4579,7 @@ body {
                             text-decoration: none;
 
                             &:hover {
-                                background: $light;
+                                background: $main;
                                 color: #fff;
                                 text-decoration: none;
                             }
@@ -4586,7 +4587,7 @@ body {
                     }
 
                     a {
-                        color: $light;
+                        color: $main;
 
                         @include transition(all, 0.3s);
 
@@ -4689,11 +4690,11 @@ body {
                         }
 
                         &:hover {
-                            color: $light;
+                            color: $main;
                             text-decoration: underline;
 
                             span {
-                                color: $light;
+                                color: $main;
                             }
                         }
                     }
@@ -4939,7 +4940,7 @@ body {
                 &::after {
                     content: "\f055";
                     font-family: "fontawesome";
-                    color:$light;
+                    color:$main;
                     position:absolute;
                     top:1rem;
                     right:.5rem;
@@ -4970,7 +4971,7 @@ body {
             margin:1rem auto;
         }
         sup,sub{
-            color:$light;
+            color:$main;
             margin:0 4px;
         }
         h3{
@@ -5105,7 +5106,7 @@ body {
 
 
             input[type="submit"] {
-                background: $light;
+                background: $main;
                 color: #fff;
                 text-align: center;
                 font-size: 15px;
@@ -5187,7 +5188,7 @@ body {
 
 
             input[type="submit"] {
-                background: $light;
+                background: $main;
                 color: #fff;
                 text-align: center;
                 font-size: 15px;
@@ -5226,7 +5227,8 @@ body {
                 font-weight: bold;
                 vertical-align: middle;
                 margin:0 5px;
-                color:$second;
+                //color:$second;
+                color:$red;
             }
         }
 
@@ -5275,7 +5277,7 @@ body {
                     content: "\f0f6";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5287,7 +5289,7 @@ body {
                     content: "\f00c";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5310,7 +5312,7 @@ body {
                     content: "\f087";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5321,7 +5323,7 @@ body {
                     content: "\f2c0";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5332,7 +5334,7 @@ body {
                     content: "\f0f6";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5343,7 +5345,7 @@ body {
                     content: "\f1d9";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5354,7 +5356,7 @@ body {
                     content: "\f115";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5365,7 +5367,7 @@ body {
                     content: "\f0e5";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5376,7 +5378,7 @@ body {
                     content: "\f24a";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5387,7 +5389,7 @@ body {
                     content: "\f06e";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                     margin-right:8px;
                 }
             }
@@ -5435,7 +5437,7 @@ body {
                 }
 
                 > span {
-                    color: $light;
+                    color: $main;
                     font-weight: bold;
                     font-size: 14px;
                 }
@@ -5512,7 +5514,7 @@ body {
                     content: "\f0f6";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5522,7 +5524,7 @@ body {
                     content: "\f087";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5532,7 +5534,7 @@ body {
                     content: "\f2c0";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5542,7 +5544,7 @@ body {
                     content: "\f0f6";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5552,7 +5554,7 @@ body {
                     content: "\f1d9";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5562,7 +5564,7 @@ body {
                     content: "\f115";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5572,7 +5574,7 @@ body {
                     content: "\f0e5";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5582,7 +5584,7 @@ body {
                     content: "\f24a";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5592,7 +5594,7 @@ body {
                     content: "\f06e";
                     font-family: "fontawesome";
                     background: none;
-                    color:$light;
+                    color:$main;
                 }
             }
         }
@@ -5616,7 +5618,7 @@ body {
             }
 
             &:hover {
-                color: $light;
+                color: $main;
             }
         }
     }
@@ -5719,8 +5721,8 @@ body {
 
 
                     &:hover {
-                        background: $light;
-                        border-color: $light;
+                        background: $main;
+                        border-color: $main;
                         color: #fff;
                     }
                 }
@@ -5765,8 +5767,8 @@ body {
 
                 &.cta {
                     a {
-                        border-color: $light;
-                        background: $light;
+                        border-color: $main;
+                        background: $main;
                         color: #fff;
 
                         &:hover {
@@ -5789,8 +5791,8 @@ body {
                     @include transition(all, 0.3s);
 
                     &:hover {
-                        border-color: $light;
-                        color: $light;
+                        border-color: $main;
+                        color: $main;
                     }
                 }
 
@@ -5884,7 +5886,7 @@ body {
             }
 
             input[type="submit"] {
-                background: $light;
+                background: $main;
                 color: #fff;
                 text-align: center;
                 margin-bottom: 20px;
@@ -5963,7 +5965,7 @@ body {
 
                         &::before {
                             content: "\f106";
-                            color: $light;
+                            color: $main;
                         }
                     }
 
@@ -5991,7 +5993,7 @@ body {
                                 }
 
                                 &:hover {
-                                    color: $light;
+                                    color: $main;
                                 }
                             }
                         }
@@ -6003,7 +6005,7 @@ body {
 
                     &:hover {
                         &::before {
-                            color: $light;
+                            color: $main;
                         }
                     }
                 }
@@ -6025,7 +6027,7 @@ body {
                     }
 
                     &:hover {
-                        color: $light;
+                        color: $main;
 
                         &::after {
                             margin-right: 0;
@@ -6041,11 +6043,15 @@ body {
                     margin-top: 20px;
                     line-height: 40px;
 
+                    &::before{
+                        display:none !important;
+                    }
+
                     > a {
                         display: block;
                         text-align: center;
                         font-size: 15px;
-                        border: 1px solid $light;
+                        border: 1px solid $main;
                         color: $main;
 
                         @include border-radius(20px);
@@ -6065,7 +6071,7 @@ body {
 
                         &:hover {
                             color: #fff;
-                            background: $light;
+                            background: $main;
                         }
                     }
                 }
@@ -6129,7 +6135,7 @@ body {
 
                         &::before {
                             content: "\f106";
-                            color: $light;
+                            color: $main;
                         }
                     }
 
@@ -6157,7 +6163,7 @@ body {
                                 }
 
                                 &:hover {
-                                    color: $light;
+                                    color: $main;
                                 }
                             }
                         }
@@ -6169,7 +6175,7 @@ body {
 
                     &:hover {
                         &::before {
-                            color: $light;
+                            color: $main;
                         }
                     }
                 }
@@ -6182,7 +6188,7 @@ body {
                     @include transition(all, 0.3s);
 
                     &:hover {
-                        color: $light;
+                        color: $main;
 
                         &::after {
                             margin-right: 0;
@@ -6253,7 +6259,7 @@ body {
                 @include transition(all, 0.3s);
 
                 &:hover, &.selected {
-                    color: $light;
+                    color: $main;
                 }
 
                 span {
@@ -6278,10 +6284,10 @@ body {
                             float: left;
                             margin-right: 1rem;
                             margin-left: 0;
-                            color: $light;
+                            color: $main;
                             text-align: left;
 
-                            //border:1px solid $light;
+                            //border:1px solid $main;
                             //padding:0 5px;
                             display: inline-block;
                             font-size: 12px;
@@ -6302,7 +6308,7 @@ body {
             color: $text;
 
             &:hover {
-                color: $light;
+                color: $main;
             }
         }
 
@@ -6377,7 +6383,7 @@ body {
                         }
                     }
 
-                    color: $light;
+                    color: $main;
                 }
             }
 
@@ -6389,7 +6395,7 @@ body {
                         }
                     }
 
-                    color: $light;
+                    color: $main;
                 }
             }
         }
@@ -6977,7 +6983,7 @@ option {
     }
 
     .ui-state-default.ui-state-active {
-        background: $light;
+        background: $main;
         color: #fff;
     }
 
