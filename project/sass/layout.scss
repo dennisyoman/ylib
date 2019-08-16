@@ -981,6 +981,9 @@ body {
         }
 
         .links {
+            white-space: nowrap;
+            overflow-x: hidden;
+
             li {
                 display: inline-block;
                 margin-left: 1rem;
@@ -1023,6 +1026,7 @@ body {
             }
 
             .links {
+                white-space: normal;
                 li {
                     width: 17%;
                     text-align: center;
