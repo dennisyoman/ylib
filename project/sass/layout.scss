@@ -1419,6 +1419,12 @@ body {
 
             @include transition(all, 0.3s);
 
+            >span{
+                display:block;
+                //height:100%;
+                max-width:100%;
+            }
+
             img {
                 max-height: 189px;
                 max-width: 100%;
@@ -1443,11 +1449,14 @@ body {
             animation-fill-mode: both;
 
             @include transition(all, 0.3s);
-
+            
             > span {
                 display: inline-block;
                 position: relative;
                 background: $text;
+                //display:block;
+                //height:100%;
+                max-width:100%;
 
                 @include transition(all, 0.3s);
 
@@ -2043,10 +2052,15 @@ body {
                     font-size: 22px;
                 }
             }
+            >span{
+                display:block;
+                //height:100%;
+                width:100%;
+            }
 
             img {
                 max-height: 189px;
-                max-width: 100%;
+                max-width: calc(100% - 20px);
 
                 @media screen and (max-width: $mobile) {
                     max-height: 220px;
@@ -2535,9 +2549,14 @@ body {
 
                     @include transition(all, 0.3s);
 
+                    >span{
+                        max-width:100%;
+                    }
+
                     img {
                         height: 189px;
-                        width: auto;
+                        //width: auto;
+                        max-width:100%;
 
                         @media screen and (max-width: $mobile) {
                             height: 220px;
@@ -2559,6 +2578,7 @@ body {
                         display: inline-block;
                         position: relative;
                         background: $text;
+                        max-width: 100%;
 
                         @include transition(all, 0.3s);
 
@@ -2651,6 +2671,7 @@ body {
                             //top:auto;
                         }
                     }
+
 
                     img {
                         max-height: 189px;
