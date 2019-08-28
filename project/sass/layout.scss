@@ -1295,6 +1295,25 @@ body {
         &:hover {
             .thumb {
                 @include translate(0, -10px);
+
+                > span {
+
+                    img {
+                        @include opacity(0.3);
+                    }
+                }
+
+                .cart {
+                    margin-left: 5px;
+
+                    @include opacity(1);
+                }
+
+                .discover {
+                    margin-right: 5px;
+
+                    @include opacity(1);
+                }
             }
 
             .thumb3d {
@@ -1419,10 +1438,86 @@ body {
 
             @include transition(all, 0.3s);
 
-            >span{
-                display:block;
-                //height:100%;
-                max-width:100%;
+            > span {
+                display: block;
+                position: relative;
+                background: #fff;
+                width:100%;
+
+                @include transition(all, 0.3s);
+
+                img {
+                    @include transition(opacity, 0.6s);
+                }
+
+            }
+
+            .cart {
+                top: 50%;
+                left: 50%;
+                width: 40px;
+                height: 40px;
+                margin-left: 15px;
+                margin-top: -20px;
+                line-height: 40px;
+                text-align: center;
+
+                @include border-radius(100%);
+
+                z-index: 5;
+                border: 1px solid rgba(101, 167, 78, 0.3);
+
+                @include opacity(0);
+                
+                &::after {
+                    content: "\f07a";
+                    font-family: "fontawesome";
+                    font-size: 22px;
+                    color:$main;
+                }
+
+                &:hover {
+                    border: 1px solid $main;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    //@include opacity(1);
+                    //bottom:5px;
+                    //top:auto;
+                    //background-color:rgba(0,0,0,.7);
+                }
+            }
+
+            .discover {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                margin-top: -20px;
+                margin-right: 15px;
+                z-index: 5;
+                border: 1px solid rgba(101, 167, 78, 0.3);
+                line-height: 40px;
+                text-align: center;
+
+                @include transition(all, 0.3s);
+                @include opacity(0);
+                @include border-radius(100%);
+
+                color:$main;
+                text-decoration: none;
+
+                &:hover {
+                    border: 1px solid $main;
+                }
+
+                &::after {
+                    content: "\f002";
+                    font-family: "fontawesome";
+                    font-size: 22px;
+                }
             }
 
             img {
@@ -1594,7 +1689,8 @@ body {
             line-height: 13px;
             color: $text;
             margin: 0 auto 20px;
-            max-height: 13px;
+            max-height: 18px;
+            height:18px;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             overflow: hidden;
@@ -1734,6 +1830,12 @@ body {
         .group-book {
             .fulldetail{
                 display:none;
+            }
+
+            .thumb,.thumb3d{
+                >span{
+                    margin-right:0 !important;
+                }
             }
         }
     }
@@ -1973,14 +2075,20 @@ body {
             @include transition(all, 0.3s);
 
             > span {
-                display: inline-block;
                 position: relative;
                 background: #fff;
+                display:block;
+                width:100%;
+                margin-right:20px;
 
                 @include transition(all, 0.3s);
 
                 img {
                     @include transition(opacity, 0.6s);
+                }
+
+                @media screen and (max-width: $mobile) {
+                     margin-right:20px;
                 }
 
             }
@@ -2013,12 +2121,7 @@ body {
                     border: 1px solid $main;
                 }
 
-                @media screen and (max-width: $mobile) {
-                    //@include opacity(1);
-                    //bottom:5px;
-                    //top:auto;
-                    //background-color:rgba(0,0,0,.7);
-                }
+                
             }
 
             .discover {
@@ -2052,19 +2155,13 @@ body {
                     font-size: 22px;
                 }
             }
-            >span{
-                display:block;
-                //height:100%;
-                width:100%;
-            }
 
             img {
                 max-height: 189px;
-                max-width: calc(100% - 20px);
+                max-width: 100%;
 
                 @media screen and (max-width: $mobile) {
                     max-height: 220px;
-                    max-width: 100%;
                 }
             }
 
@@ -2087,6 +2184,7 @@ body {
                 display: inline-block;
                 position: relative;
                 background: $text;
+                margin-right:20px;
 
                 @include transition(all, 0.3s);
 
@@ -2107,6 +2205,10 @@ body {
                     animation-name: sideFlipOut;
                     animation-duration: .3s;
                     animation-fill-mode: both;
+                }
+
+                @media screen and (max-width: $mobile) {
+                     margin-right:0px;
                 }
             }
 
@@ -2427,6 +2529,25 @@ body {
                 &:hover {
                     .thumb {
                         @include translate(0, -10px);
+
+                        > span {
+
+                            img {
+                                @include opacity(0.3);
+                            }
+                        }
+
+                        .cart {
+                            margin-left: 5px;
+
+                            @include opacity(1);
+                        }
+
+                        .discover {
+                            margin-right: 5px;
+
+                            @include opacity(1);
+                        }
                     }
 
                     .thumb3d {
@@ -2549,18 +2670,105 @@ body {
 
                     @include transition(all, 0.3s);
 
+                    > span {
+                        display: inline-block;
+                        position: relative;
+                        background: #fff;
+
+                        @include transition(all, 0.3s);
+
+                        img {
+                            @include transition(opacity, 0.6s);
+                        }
+
+                    }
+
+                    .cart {
+                        top: 50%;
+                        left: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-left: 15px;
+                        margin-top: -20px;
+                        line-height: 40px;
+                        text-align: center;
+
+                        @include border-radius(100%);
+
+                        z-index: 5;
+                        border: 1px solid rgba(101, 167, 78, 0.3);
+
+                        @include opacity(0);
+                        text-decoration: none;
+                        
+                        &::after {
+                            content: "\f07a";
+                            font-family: "fontawesome";
+                            font-size: 22px;
+                            color:$main;
+                        }
+
+                        &:hover {
+                            border: 1px solid $main;
+                        }
+
+                        @media screen and (max-width: $mobile) {
+                            //@include opacity(1);
+                            //bottom:5px;
+                            //top:auto;
+                            //background-color:rgba(0,0,0,.7);
+                        }
+                    }
+
+                    .discover {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        top: 50%;
+                        right: 50%;
+                        margin-top: -20px;
+                        margin-right: 15px;
+                        z-index: 5;
+                        border: 1px solid rgba(101, 167, 78, 0.3);
+                        line-height: 40px;
+                        text-align: center;
+
+                        @include transition(all, 0.3s);
+                        @include opacity(0);
+                        @include border-radius(100%);
+
+                        color:$main;
+                        text-decoration: none;
+
+                        &:hover {
+                            border: 1px solid $main;
+                        }
+
+                        &::after {
+                            content: "\f002";
+                            font-family: "fontawesome";
+                            font-size: 22px;
+                        }
+                    }
                     >span{
-                        max-width:100%;
+                        display:block;
+                        //height:100%;
+                        width:100%;
                     }
 
                     img {
-                        height: 189px;
-                        //width: auto;
-                        max-width:100%;
+                        max-height: 189px;
+                        max-width: calc(100% - 20px);
 
                         @media screen and (max-width: $mobile) {
-                            height: 220px;
+                            max-height: 220px;
+                            max-width: 100%;
                         }
+                    }
+
+                    @media screen and (max-width: $mobile) {
+                        height: 220px;
                     }
                 }
 
