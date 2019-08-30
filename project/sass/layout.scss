@@ -1686,11 +1686,11 @@ body {
         .author {
             text-align: center;
             font-size: 13px;
-            line-height: 13px;
+            line-height: 17px;
             color: $text;
             margin: 0 auto 20px;
-            max-height: 18px;
-            height:18px;
+            max-height: 17px;
+            height:17px;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             overflow: hidden;
@@ -1835,6 +1835,7 @@ body {
             .thumb,.thumb3d{
                 >span{
                     margin-right:0 !important;
+                    max-width:100%;
                 }
             }
         }
@@ -1964,7 +1965,7 @@ body {
                 width:47%;
                 display:inline-block;
                 margin-right:2%;
-                margin-bottom:5px;
+                margin-bottom:3px;
 
                 span{
                     color:$main;
@@ -2078,7 +2079,7 @@ body {
                 position: relative;
                 background: #fff;
                 display:block;
-                width:100%;
+                //width:100%;
                 margin-right:20px;
 
                 @include transition(all, 0.3s);
@@ -2086,9 +2087,8 @@ body {
                 img {
                     @include transition(opacity, 0.6s);
                 }
-
-                @media screen and (max-width: $mobile) {
-                     margin-right:20px;
+                @media screen and (max-width: 600px) {
+                    margin-right:0px;
                 }
 
             }
@@ -2185,6 +2185,7 @@ body {
                 position: relative;
                 background: $text;
                 margin-right:20px;
+                max-width:calc(100% - 20px);
 
                 @include transition(all, 0.3s);
 
@@ -2209,6 +2210,7 @@ body {
 
                 @media screen and (max-width: $mobile) {
                      margin-right:0px;
+                     max-width:100%;
                 }
             }
 
@@ -2319,10 +2321,11 @@ body {
         .author {
             text-align: center;
             font-size: 13px;
-            line-height: 13px;
+            line-height: 17px;
             color: $text;
             margin: 0 auto 20px;
-            max-height: 13px;
+            max-height: 17px;
+            height:17px;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             overflow: hidden;
@@ -2922,10 +2925,11 @@ body {
                 .author {
                     text-align: center;
                     font-size: 13px;
-                    line-height: 13px;
+                    line-height: 17px;
                     color: $text;
                     margin: 0 auto 20px;
-                    max-height: 13px;
+                    max-height: 17px;
+                    height:17px;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 1;
                     overflow: hidden;
