@@ -1235,12 +1235,28 @@ body {
         width:100%;
         height:calc(100vh - 150px);
         max-height:calc(52vw - 150px);
+        min-height:36vw;
         overflow:hidden;
 
-        @media screen and (max-width: $mobile) {
-          height:52vw;
-          max-height:none;
+        @media screen and (max-width: $mobile2) {
+            height:calc(100vh - 50px);
+            max-height:calc(52vw - 50px);
         }
+
+        @media screen and (min-aspect-ratio: 1320/600) and (min-width: $mobile2) {
+            height:36vw;
+            max-height:36vw;
+        }
+        @media screen and (min-aspect-ratio: 870/360) and (max-width: $mobile2) {
+            height:36vw;
+            max-height:36vw;
+        }
+
+        @media screen and (max-aspect-ratio: 1/1){
+            height:52vw;
+            max-height:52vw;
+        }
+
 
         .swiper-wrapper {
             width: 100%;

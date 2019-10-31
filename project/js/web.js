@@ -239,9 +239,12 @@ $(document).ready(
                 // Optional parameters
                 loop: true,
                 //effect:'fade',
-                autoHeight:true,
+                //autoHeight:true,
                 spaceBetween: 0,
                 slidesPerGroup:1,
+                autoplay: {
+                    delay: 3000,
+                },
                 // If we need pagination
                 pagination: {
                     el: '.swiper-container-banner .swiper-pagination',
